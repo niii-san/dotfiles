@@ -1,0 +1,49 @@
+
+
+
+window {
+    font-family: monospace;
+    font-size: 14pt;
+    color: #cdd6f4; /* text */
+    background-color: rgba(0, 3, 0, 0.6);
+}
+
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%;
+    border: none;
+    background-color: rgba(30, 30, 46, 0);
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+
+button:focus {
+    background-color: #cba6f7;
+    color: #1e1e2e;
+}
+
+#shutdown {
+    background-image: image(url("./icons/power.png"));
+}
+
+#logout {
+    background-image: image(url("./icons/logout.png"));
+
+}
+
+#suspend {
+	background-image:image(url("./icons/sleep.png"));
+}
+
+#reboot {
+    background-image: image(url("./icons/restart.png"));
+}
+
+#lock {
+    background-image: image(url("./icons/lock.png"));
+}
+
+#hibernate {
+    background-image: image(url("./icons/hibernate.png"));
+}

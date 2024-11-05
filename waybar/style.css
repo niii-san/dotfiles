@@ -1,0 +1,174 @@
+@define-color bg #000000;
+@define-color bg-active #6f6f6f;
+@define-color active #6dd62a;
+
+* {
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 1;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #FFFFFF;
+    /* Keep transparent to blur */
+}
+
+
+
+#workspaces {
+    background-color: @bg;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+#workspaces button {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    color: #cccccc;
+}
+
+#workspaces button:hover {}
+
+#workspaces button.active {
+    background-color: @bg-active;
+    color: #FFFFFF;
+}
+
+
+
+
+
+#cpu,
+#memory {
+    background: @bg;
+}
+
+#cpu {
+    border-radius: 8px 0 0 8px;
+    padding-left: 15px;
+    margin-left: 100px;
+}
+
+#memory {
+    border-radius: 0 8px 8px 0;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+
+
+
+#clock {
+
+    background: @bg;
+    border-radius: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#clock.clock2 {
+    margin-right: 25px;
+}
+
+
+
+#backlight,
+#wireplumber,
+#battery {
+    background: @bg;
+}
+
+#backlight {
+    border-radius: 8px 0 0 8px;
+    padding-left: 18px;
+}
+
+#wireplumber {
+    padding-left: 15px;
+}
+
+#wireplumber.muted {
+    color: #ffac00;
+}
+
+
+#battery {
+    border-radius: 0 8px 8px 0;
+    padding-right: 18px;
+    padding-left: 15px;
+    margin-right: 50px;
+}
+
+#battery.warning {
+    color: #ffac00;
+}
+
+#battery.critical {
+    color: #c30000;
+}
+
+#battery.charging {
+    color: @active;
+}
+
+
+
+#network,
+#bluetooth {
+    background: @bg;
+}
+
+#bluetooth.on {
+    color: @active;
+}
+
+#bluetooth.connected {
+    font-size: 12px;
+    color: @active;
+}
+
+#network {
+    border-radius: 8px 0 0 8px;
+    padding-left: 18px;
+}
+
+#network.disconnected {
+    color: #c30000;
+}
+
+
+#bluetooth {
+    font-size: 12px;
+    border-radius: 0 8px 8px 0;
+    padding-right: 18px;
+    padding-left: 18px;
+    margin-right: 50px;
+}
+
+
+#custom-power {
+    color: #c30000;
+    background: @bg;
+    border-radius: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 10px;
+
+}
+
+
+
+tooltip {
+    background: @bg;
+    border: 2px solid white;
+    padding: 0;
+    margin: 0;
+}
+
+tooltip label {
+    color: white;
+    font-size: small;
+}

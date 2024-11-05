@@ -1,0 +1,14 @@
+configuration {
+    modes: "window,run,ssh,drun";
+    sorting-method: "normal";
+    show-icons:false;
+    matching: "regex";
+    drun-match-fields: "name";
+    display-run: "Menu:";
+    display-ssh: "SSH:";
+    display-drun: "Drun:";
+    display-window: "Windows:";
+}
+
+@theme "minimal"
+
