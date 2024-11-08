@@ -55,6 +55,15 @@ collage(){
 }
 
 
+run_postgresql(){
+    cd ~/pgadmin4
+    echo "Activating python virtual environment"
+    source postgres-venv/bin/activate
+    echo "virtual environment activated " $VIRTUAL_ENV 
+    which python
+    sleep 3
+    python3 web/pgAdmin4.py
+}
 
 
 
