@@ -6,6 +6,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+set -o vi
+bind -m vi-insert "\C-l":clear-screen
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
@@ -54,6 +57,9 @@ collage(){
     cd /media/collage
 }
 
+wallpaper(){
+    nv ~/.config/hypr/hyprpaper.conf
+}
 
 run_postgresql(){
     cd ~/pgadmin4
