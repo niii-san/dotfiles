@@ -22,7 +22,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     ui = {
-
         border = "rounded",
     },
 
@@ -30,35 +29,16 @@ require("lazy").setup({
         colorscheme = { "tokyonight-night" },
     },
     spec = {
-
         { import = "plugins" },
     },
 })
 
--- Diagnostic configuration with both inline virtual text and floating window
-vim.diagnostic.config({
-    virtual_text = {
-        prefix = "●",  -- Customize the symbol shown for inline diagnostics
-        spacing = 2,   -- Space between diagnostic and code
-    },
-    float = {
-        source = "always",  -- Show the source of the diagnostic in floating window
-        border = "rounded", -- Rounded border for floating window
-    },
-    severity_sort = true,   -- Sort diagnostics by severity level
-})
-
--- Keymap to show diagnostics in a floating window at the cursor position
-vim.api.nvim_set_keymap('n', '<leader>u', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
-
-
 
 -- Theme
-vim.cmd("colorscheme tokyonight-night")
+vim.cmd("colorscheme carbonfox")
 
 -- Set conceallevel to 2 to fully conceal Markdown tags
 vim.cmd([[
     autocmd FileType markdown setlocal conceallevel=2
     autocmd FileType markdown setlocal concealcursor=n
 ]])
-
