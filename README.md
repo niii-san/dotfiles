@@ -10,12 +10,13 @@ git clone https://github.com/nii-shaan/dotfiles
 
 
 
-### Run setup.sh
+## Run install.sh 
+`Running install.sh will install all the dependencies and load the dotfiles`
 
 ```bash
 
 cd dotfiles
 
-./setup.sh
+./install.sh
 
 ```
