@@ -1,7 +1,7 @@
 configuration {
     modes: "window,run,ssh,drun";
     sorting-method: "normal";
-    show-icons:false;
+    show-icons:true;
     matching: "regex";
     drun-match-fields: "name";
     display-run: "Menu:";

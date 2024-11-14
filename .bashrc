@@ -36,7 +36,6 @@ fastfetch
 }
 
 quote(){
-    clear
     cowthink $(fortune -s)
 }
 
@@ -57,7 +56,14 @@ collage(){
     cd /media/collage
 }
 
-wallpaper(){
+rewall(){
+    pkill hyprpaper
+    sleep 1
+    nohup hyprpaper &> /dev/null & 
+    echo "Wallpaper reloaded"
+}
+
+changewall(){
     nv ~/.config/hypr/hyprpaper.conf
 }
 

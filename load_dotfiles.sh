@@ -16,6 +16,9 @@ ln -s ~/dotfiles/wlogout ~/.config/wlogout
 ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
 
 
+ln -s ~/dotfiles/scripts ~/.config/scripts
+
+
 
 # Check if .bashrc exists in the home directory
 if [ -f "$HOME/.bashrc" ]; then
@@ -23,7 +26,6 @@ if [ -f "$HOME/.bashrc" ]; then
     echo "Removed existing .bashrc"
 
 fi
-
 ln -s ~/dotfiles/.bashrc ~/.bashrc
 
 
