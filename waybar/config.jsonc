@@ -3,7 +3,8 @@
     "height": 10, // Waybar height (to be removed for auto height)
     "spacing": 0, // Gaps between modules (4px)
     "modules-left": [
-        "custom/change-wallpaper",
+        "custom/wallpaper-previous",
+        "custom/wallpaper-next",
         "cpu",
         "memory"
     ],
@@ -107,7 +108,7 @@
         "format": "",
         "format-connected": "󰂱",
         //	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
-        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        // "format-device-preference": [ "device1", "device2" ], // preferenceat Alam. list deciding the displayed device
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
@@ -129,9 +130,14 @@
         "tooltip-format": "⏻  Power",
         "on-click": "wlogout"
     },
-    "custom/change-wallpaper": {
-        "on-click": "exec ~/.config/scripts/change_wallpaper.sh",
-        "format": " ",
-        "tooltip-format": " Change Wallpaper "
+    "custom/wallpaper-previous": {
+        "on-click": "exec ~/.config/scripts/change_wallpaper_previous.sh",
+        "format": " ",
+        "tooltip-format": " Change Wallpaper (Previous) "
+    },
+    "custom/wallpaper-next": {
+        "on-click": "exec ~/.config/scripts/change_wallpaper_next.sh",
+        "format": " ",
+        "tooltip-format": " Change Wallpaper (Next) "
     }
 }

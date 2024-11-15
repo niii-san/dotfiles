@@ -56,16 +56,11 @@ collage(){
     cd /media/collage
 }
 
-rewall(){
-    pkill hyprpaper
-    sleep 1
-    nohup hyprpaper &> /dev/null & 
-    echo "Wallpaper reloaded"
+badapple(){
+    cd ~/funs/Bad-Apple-Terminal
+    npm start
 }
 
-changewall(){
-    nv ~/.config/hypr/hyprpaper.conf
-}
 
 run_postgresql(){
     cd ~/pgadmin4

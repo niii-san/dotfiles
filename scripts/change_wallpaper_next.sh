@@ -4,10 +4,10 @@ hyprpaper_config_file="$HOME/.config/hypr/hyprpaper.conf"
 
 wallpapers_dir="$HOME/Wallpapers"
 
-# Hidden file to store the current wallpaper name
+# hiddn file to store the current wallpaper name
 current_wallpaper_file="$HOME/.config/hypr/.current_wallpaper"
 
-# Get a list of all wallpapers in the directory, sorted alphabetically
+# list of all wallpapers in the directory, sorted alphabetically
 wallpapers=("$wallpapers_dir"/*)
 wallpaper_count=${#wallpapers[@]}
 
@@ -29,7 +29,7 @@ current_index=${current_index:- -1}
 next_index=$(( (current_index + 1) % wallpaper_count ))
 next_wallpaper="${wallpapers[$next_index]}"
 
-# Update hyprpaper.conf with the new wallpaper path
+# Update hyprpaper.conf 
 sed -i "s|^preload = .*|preload = $next_wallpaper|" "$hyprpaper_config_file"
 sed -i "s|^wallpaper = .*|wallpaper = ,$next_wallpaper|" "$hyprpaper_config_file"
 
@@ -37,11 +37,11 @@ sed -i "s|^wallpaper = .*|wallpaper = ,$next_wallpaper|" "$hyprpaper_config_file
 echo "$next_wallpaper" > "$current_wallpaper_file"
 
 
-dunstify "Wallpaper changed" "$(basename "$current_wallpaper")  to  $(basename "$next_wallpaper")" -u low
+dunstify "Wallpaper changed (Forward)" "$(basename "$next_wallpaper")" -u low
 
 
 
-# Reload Hyprpaper to apply changes
+# Reload Hyprpaper 
 pkill hyprpaper 
 sleep 1
 hyprpaper &
