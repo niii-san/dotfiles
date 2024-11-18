@@ -106,7 +106,7 @@
     },
     "bluetooth": {
         "format": "",
-        "format-connected": "󰂱",
+        "format-connected": "󰂱 ",
         //	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
         // "format-device-preference": [ "device1", "device2" ], // preferenceat Alam. list deciding the displayed device
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
