@@ -2,8 +2,13 @@ return {
     {
         "williamboman/mason.nvim",
 
+
         config = function()
-            require("mason").setup()
+            require("mason").setup({
+                opts={
+                    ensure_installed ={"prettierd"}
+                }
+            })
         end,
     },
     {

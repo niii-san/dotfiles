@@ -5,9 +5,8 @@ vim.keymap.set("n", "<leader>fs", ":Telescope live_grep<CR>")
 vim.keymap.set("n", "<leader>th", ":Telescope colorscheme<CR>")
 
 --format
-vim.keymap.set('n', '<leader>ft', function()
-    vim.lsp.buf.format({ async = false })
-end, { noremap = true })
+vim.keymap.set('n', '<leader>ft', vim.lsp.buf.format, {})
+
 
 vim.keymap.set("n", "<m-tab>", ":BufferLineCycleNext<CR>")
 vim.keymap.set("n", "<m-w>", ":BufferLinePickClose<CR>")
@@ -16,8 +15,8 @@ vim.keymap.set("n", "<m-w>", ":BufferLinePickClose<CR>")
 -- Diagnostic configuration with both inline virtual text and floating window
 vim.diagnostic.config({
     virtual_text = {
-        prefix = "●",  -- Customize the symbol shown for inline diagnostics
-        spacing = 2,   -- Space between diagnostic and code
+        prefix = "●", -- Customize the symbol shown for inline diagnostics
+        spacing = 2, -- Space between diagnostic and code
     },
     float = {
         source = "always",  -- Show the source of the diagnostic in floating window
