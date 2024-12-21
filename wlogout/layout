@@ -3,11 +3,11 @@
 {
     "label" : "shutdown",
     "action" : "shutdown now",
-    "text" : "shutdown",
+    "text" : "Shutdown",
     "keybind" : "s"
 }
 {
-    "label" : "reboot",
+    "label" : "seboot",
     "action" : "systemctl reboot",
     "text" : "Reboot",
     "keybind" : "r"
