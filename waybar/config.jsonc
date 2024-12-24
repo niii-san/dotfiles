@@ -6,7 +6,7 @@
         "custom/wallpaper-previous",
         "custom/wallpaper-next",
         "cpu",
-        "memory"
+        "memory",
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -19,14 +19,14 @@
         "bluetooth",
         "clock",
         "clock#clock2",
-        "custom/power"
+        "custom/power",
     ],
     "hyprland/workspaces": {
-        "all-outputs": true
+        "all-outputs": true,
     },
     "clock": {
         "format": "{:%I : %M %p}",
-        "tooltip": false
+        "tooltip": false,
     },
     "clock#clock2": {
         "format": "    {:%m / %d %a}",
@@ -43,18 +43,18 @@
                 "days": "<span color='#ecc6d9'><b>{}</b></span>",
                 "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
                 "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-            }
-        }
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+            },
+        },
     },
     "cpu": {
         "format": "    {usage}%",
         "tooltip": true,
-        "interval": 2
+        "interval": 2,
     },
     "memory": {
         "format": "   {}%",
-        "interval": 4
+        "interval": 4,
     },
     "backlight": {
         "format": "{icon}   {percent}%",
@@ -68,13 +68,13 @@
             " ",
             " ",
             " "
-        ]
+        ],
     },
     "battery": {
         "states": {
             "good": 80,
             "warning": 30,
-            "critical": 20
+            "critical": 20,
         },
         "format": "{icon}  {capacity}%",
         "format-full": "{capacity}% {icon}",
@@ -93,7 +93,7 @@
             "󰂁",
             "󰂂",
             "󰁹"
-        ]
+        ],
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -102,7 +102,7 @@
         "tooltip-format": "NAME: {essid}\nFREQUENCY: {frequency}\nIP: {ipaddr}\nGATEWAY: {gwaddr}\nNETMASK: {netmask}\nUPLOAD: {bandwidthUpBits}\nDOWNLOAD: {bandwidthDownBits}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "⚠ Disconnected",
-        "on-click": "kitty nmtui"
+        "on-click": "kitty nmtui",
     },
     "bluetooth": {
         "format": "",
@@ -113,7 +113,7 @@
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-        "on-click": "blueman-manager"
+        "on-click": "blueman-manager",
     },
     "wireplumber": {
         "format": "{icon}  {volume}%",
@@ -123,21 +123,21 @@
             "",
             " ",
             "  "
-        ]
+        ],
     },
     "custom/power": {
         "format": "⏻",
         "tooltip-format": "⏻  Power",
-        "on-click": "wlogout"
+        "on-click": "wlogout",
     },
     "custom/wallpaper-previous": {
         "on-click": "exec ~/.config/scripts/change_wallpaper_previous.sh",
         "format": " ",
-        "tooltip-format": " Change Wallpaper (Previous) "
+        "tooltip-format": " Change Wallpaper (Previous) ",
     },
     "custom/wallpaper-next": {
         "on-click": "exec ~/.config/scripts/change_wallpaper_next.sh",
         "format": " ",
-        "tooltip-format": " Change Wallpaper (Next) "
-    }
+        "tooltip-format": " Change Wallpaper (Next) ",
+    },
 }
