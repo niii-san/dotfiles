@@ -5,7 +5,7 @@ return {
         config = function()
             require("mason").setup({
                 opts = {
-                    ensure_installed = { "tsserver", "pyright", "css-lsp", "clangd", "prettier" },
+                    ensure_installed = { "tsserver", "pyright", "css-lsp", "clangd", "prettier", "jdtls" },
                 },
             })
         end,
@@ -66,7 +66,10 @@ return {
 
             --Java
             lspconfig.jdtls.setup({
+
                 capabilities = capabilities,
+                cmd = { "jdtls" },
+                root_dir = require("lspconfig.util").root_pattern(".git", "pom.xml", "build.gradle"),
             })
 
             --C language
