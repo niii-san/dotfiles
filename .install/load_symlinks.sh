@@ -44,6 +44,9 @@ ln -s ~/dotfiles/swappy ~/.config/swappy
 #wlogout
 ln -s ~/dotfiles/wlogout ~/.config/wlogout  # yay package
 
+#waypaper 
+ln -s ~/dotfiles/waypaper ~/.config/waypaper
+
 
 
 # loading scripts

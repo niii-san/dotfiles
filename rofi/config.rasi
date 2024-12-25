@@ -9,6 +9,8 @@ configuration {
     display-window:             " ";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
+    matching: "regex";
+    drun-match-fields: "name";
 }
 
 /*****----- Global Properties -----*****/
