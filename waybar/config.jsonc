@@ -1,35 +1,72 @@
 {
     "layer": "top",
-    "height": 10, // Waybar height (to be removed for auto height)
+    "height": 8, // Waybar height (to be removed for auto height)
     "spacing": 0, // Gaps between modules (4px)
     "modules-left": [
-        "custom/wallpaper-previous",
-        "custom/wallpaper-next",
+        "custom/arch",
+        "power-profiles-daemon",
         "cpu",
         "memory",
+        "mpris",
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
+        "clock",
+        "clock#clock2",
+        "network",
+        "bluetooth",
         "backlight",
         "wireplumber",
         "battery",
-        "network",
-        "bluetooth",
-        "clock",
-        "clock#clock2",
         "custom/power",
     ],
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": true,
+        "tooltip-format": "btw",
+    },
+    "power-profiles-daemon": {
+        "format": "{icon} {profile}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": " ",
+            "power-saver": " ",
+        },
+    },
+    "mpris": {
+        "format": "{status_icon} {status} {player_icon}{player}   {dynamic}  ",
+        "interval": 0,
+        "dynamic-len": 40,
+        "status-icons": {
+            "playing": "▶",
+            "paused": "⏸",
+            "stopped": "",
+        },
+        "player-icons": {
+            "default": " ",
+            "spotify": " ",
+            "firefox": " ",
+            "mpv": "🎵",
+        },
+        "dynamic-order": [
+            "title",
+            "artist"
+        ],
+    }, // "ignored-players": ["firefox"]
     "hyprland/workspaces": {
         "all-outputs": true,
     },
     "clock": {
-        "format": "{:%I : %M %p}",
+        "format": " {:%I:%M %p}",
         "tooltip": false,
     },
     "clock#clock2": {
-        "format": "    {:%m / %d %a}",
+        "format": " {:%m/%d %a}",
         "format-alt": "{:%A %d %B, %Y }",
         "tooltip": true,
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -48,16 +85,16 @@
         },
     },
     "cpu": {
-        "format": "    {usage}%",
+        "format": " {usage}%",
         "tooltip": true,
         "interval": 2,
     },
     "memory": {
-        "format": "   {}%",
-        "interval": 4,
+        "format": " {}%",
+        "interval": 2,
     },
     "backlight": {
-        "format": "{icon}   {percent}%",
+        "format": "{icon}{percent}%",
         "format-icons": [
             " ",
             " ",
@@ -76,11 +113,11 @@
             "warning": 30,
             "critical": 20,
         },
-        "format": "{icon}  {capacity}%",
-        "format-full": "{capacity}% {icon}",
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format-alt": "{icon} {time}",
         "format-icons": [
             "󰂎",
             "󰁺",
@@ -97,7 +134,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "     {signalStrength}%",
+        "format-wifi": "  {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "NAME: {essid}\nFREQUENCY: {frequency}\nIP: {ipaddr}\nGATEWAY: {gwaddr}\nNETMASK: {netmask}\nUPLOAD: {bandwidthUpBits}\nDOWNLOAD: {bandwidthDownBits}",
         "format-linked": "{ifname} (No IP) ",
@@ -116,13 +153,14 @@
         "on-click": "blueman-manager",
     },
     "wireplumber": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon} {volume}%",
         "format-muted": "",
         "on-click": "pavucontrol",
         "format-icons": [
             "",
             " ",
-            "  "
+            " ",
+            " "
         ],
     },
     "custom/power": {
@@ -130,14 +168,14 @@
         "tooltip-format": "⏻  Power",
         "on-click": "wlogout",
     },
-    "custom/wallpaper-previous": {
-        "on-click": "exec ~/.config/scripts/change_wallpaper_previous.sh",
-        "format": " ",
-        "tooltip-format": " Change Wallpaper (Previous) ",
-    },
-    "custom/wallpaper-next": {
-        "on-click": "exec ~/.config/scripts/change_wallpaper_next.sh",
-        "format": " ",
-        "tooltip-format": " Change Wallpaper (Next) ",
-    },
+    // "custom/wallpaper-previous": {
+    //     "on-click": "exec ~/.config/scripts/change_wallpaper_previous.sh",
+    //     "format": " ",
+    //     "tooltip-format": " Change Wallpaper (Previous) "
+    // },
+    // "custom/wallpaper-next": {
+    //     "on-click": "exec ~/.config/scripts/change_wallpaper_next.sh",
+    //     "format": " ",
+    //     "tooltip-format": " Change Wallpaper (Next) "
+    // }
 }
