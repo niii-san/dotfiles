@@ -2,7 +2,7 @@
 
 hyprpaper_config_file="$HOME/.config/hypr/hyprpaper.conf"
 
-wallpapers_dir="$HOME/Wallpapers"
+wallpapers_dir="$HOME/wallpapers"
 
 # hiddn file to store the current wallpaper name
 current_wallpaper_file="$HOME/.config/hypr/.current_wallpaper"

@@ -15,11 +15,11 @@
     "modules-right": [
         "clock",
         "clock#clock2",
-        "network",
-        "bluetooth",
         "backlight",
         "wireplumber",
         "battery",
+        "network",
+        "bluetooth",
         "custom/power",
     ],
     "custom/arch": {
