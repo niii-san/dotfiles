@@ -1,7 +1,11 @@
 * {
-    font-size: 10px;
+    font-size: 12px;
     font-family: "JetbrainsMono Nerd Font";
     font-weight: 700;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-top: 1px;
 }
 
@@ -32,6 +36,8 @@ window#waybar {
     border-radius: 5px;
     background: #161320;
     transition: none;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 #workspaces button {
@@ -39,6 +45,7 @@ window#waybar {
     color: #b5e8e0;
     background: transparent;
     border-radius: 5px;
+    margin: 0;
 }
 
 /* #workspaces button.focused { */
@@ -71,14 +78,14 @@ window#waybar {
     border-radius: 10px 0 0 10px;
     padding-left: 15px;
     padding-right: 10px;
-    margin-left: 30px;
+    margin-left: 20px;
     transition: none;
     color: #161320;
     background: #96cdfb;
 }
 
 #memory {
-    margin-right: 30px;
+    margin-right: 20px;
     border-radius: 0 10px 10px 0;
     padding-right: 15px;
     padding-left: 15px;
@@ -88,6 +95,7 @@ window#waybar {
 }
 
 #mpris {
+    font-size: 10px;
     border-radius: 10px;
     transition: none;
     color: #89dceb;
@@ -97,7 +105,7 @@ window#waybar {
 }
 
 #power-profiles-daemon {
-    margin-left: 30px;
+    margin-left: 20px;
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -149,7 +157,7 @@ window#waybar {
 
 #battery.charging,
 #battery.plugged {
-    color: #006A67;
+    color: #006a67;
     background-color: #b5e8e0;
 }
 
@@ -178,12 +186,12 @@ window#waybar {
 }
 
 #bluetooth.on {
-    color: #0A97B0;
+    color: #0a97b0;
 }
 
 #bluetooth.connected {
     font-size: 12px;
-    color: #0A97B0;
+    color: #0a97b0;
 }
 
 #network {
