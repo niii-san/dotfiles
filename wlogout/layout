@@ -7,7 +7,7 @@
     "keybind" : "s"
 }
 {
-    "label" : "seboot",
+    "label" : "reboot",
     "action" : "systemctl reboot",
     "text" : "Reboot",
     "keybind" : "r"
