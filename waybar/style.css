@@ -113,6 +113,19 @@ window#waybar {
     background: #f8bd96;
 }
 
+#power-profiles-daemon.performance {
+    background: #db8416;
+
+}
+#power-profiles-daemon.balanced {
+    background: #26c33d;
+
+}
+#power-profiles-daemon.power-saver{
+    background: #dbe01a;
+
+}
+
 #clock {
     border-radius: 10px 0px 0px 10px;
     padding-left: 15px;
@@ -145,7 +158,7 @@ window#waybar {
 }
 
 #wireplumber.muted {
-    color: #ffac00;
+    color: #b80f2b;
 }
 
 #battery {
