@@ -115,15 +115,14 @@ window#waybar {
 
 #power-profiles-daemon.performance {
     background: #db8416;
-
 }
+
 #power-profiles-daemon.balanced {
     background: #26c33d;
-
 }
-#power-profiles-daemon.power-saver{
-    background: #dbe01a;
 
+#power-profiles-daemon.power-saver {
+    background: #dbe01a;
 }
 
 #clock {
@@ -135,7 +134,7 @@ window#waybar {
 }
 
 #clock.clock2 {
-    margin-right: 50px;
+    margin-right: 20px;
     padding-right: 15px;
     border-radius: 0px 10px 10px 0px;
 }
@@ -165,7 +164,7 @@ window#waybar {
     padding-left: 10px;
     padding-right: 20px;
     border-radius: 0px 10px 10px 0px;
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
 #battery.charging,
@@ -213,7 +212,7 @@ window#waybar {
 }
 
 #network.disconnected {
-    color: #c30000;
+    color: #ff0061;
 }
 
 #bluetooth {
@@ -221,7 +220,7 @@ window#waybar {
     border-radius: 0 10px 10px 0;
     padding-right: 20px;
     padding-left: 18px;
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
 #custom-power {
@@ -231,7 +230,6 @@ window#waybar {
     border-radius: 10px;
     padding-left: 20px;
     padding-right: 21px;
-    margin-right: 10px;
 }
 
 tooltip {
