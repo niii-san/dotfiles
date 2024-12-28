@@ -61,6 +61,9 @@
     }, // "ignored-players": ["firefox"]
     "hyprland/workspaces": {
         "all-outputs": true,
+        "persistent-workspaces": {
+             "*": 3, // 5 workspaces by default on every monitor
+       }
     },
     "clock": {
         "format": " {:%I:%M %p}",
