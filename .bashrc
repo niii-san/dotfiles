@@ -57,16 +57,16 @@ collage(){
     cd /media/collage
 }
 
-badapple(){
-    cd ~/funs/Bad-Apple-Terminal
-    npm start
-}
+# badapple(){
+    # cd ~/funs/Bad-Apple-Terminal
+    # npm start
+# }
 
 
-run_postgresql(){
+run_pgadmin(){
     cd ~/pgadmin4
     echo "Activating python virtual environment"
-    source postgres-venv/bin/activate
+    source pgadmin/bin/activate
     echo "virtual environment activated " $VIRTUAL_ENV 
     which python
     sleep 3
