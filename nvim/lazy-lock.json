@@ -5,6 +5,7 @@
   "catppuccin": { "branch": "main", "commit": "faf15ab0201b564b6368ffa47b56feefc92ce3f4" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "99290b3ec1322070bcfb9e846450a46f6efa50f0" },
   "cmp_luasnip": { "branch": "master", "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90" },
+  "copilot.vim": { "branch": "release", "commit": "cd7f01009fb7b30e22840cadc4faad88b05c6eef" },
   "dashboard-nvim": { "branch": "master", "commit": "ae309606940d26d8c9df8b048a6e136b6bbec478" },
   "dracula.nvim": { "branch": "main", "commit": "515acae4fd294fcefa5b15237a333c2606e958d1" },
   "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
