@@ -84,10 +84,9 @@ eval "$(starship init bash)"
  # Set up fzf key bindings and fuzzy completion
 #eval "$(fzf --bash)"
 
-# exec once when kitty opens
-fastfetch
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export LIBVA_DRIVER_NAME=iHD

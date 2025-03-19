@@ -4,7 +4,6 @@
   "spacing": 0, // Gaps between modules (4px)
   "modules-left": [
     "custom/arch",
-    "power-profiles-daemon",
     "cpu",
     "memory",
     "mpris",
@@ -25,22 +24,12 @@
     "tooltip": true,
     "tooltip-format": "btw",
   },
-  "power-profiles-daemon": {
-    "format": "{icon} {profile}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": " ",
-      "power-saver": " ",
-    },
-  },
+  
   "mpris": {
-    "format": "{status_icon} {status} {player_icon}{player}   {dynamic}  ",
+    "format": "{status_icon} {status}   {player_icon} {player}    {dynamic}  ",
     "tooltip-format": "{status_icon} {status} {player_icon}{player}   {title} {artist}\nAlbum: {album}\nLength: {length}",
     "interval": 0,
-    "dynamic-len": 25,
+    "dynamic-len": 45,
     "status-icons": {
       "playing": "▶",
       "paused": "⏸",
@@ -58,11 +47,11 @@
     "all-outputs": true,
   },
   "clock": {
-    "format": " {:%I:%M %p}",
+    "format": "   {:%I:%M %p}",
     "tooltip": false,
   },
   "clock#clock2": {
-    "format": " {:%m/%d %a}",
+    "format": "   {:%m/%d %a}",
     "format-alt": "{:%A %d %B, %Y }",
     "tooltip": true,
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -81,16 +70,16 @@
     },
   },
   "cpu": {
-    "format": " {usage}%",
+    "format": "   {usage}%",
     "tooltip": true,
     "interval": 2,
   },
   "memory": {
-    "format": " {}%",
+    "format": "  {}%",
     "interval": 2,
   },
   "backlight": {
-    "format": "{icon}{percent}%",
+    "format": "{icon}  {percent}%",
     "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "],
   },
   "battery": {
@@ -99,16 +88,16 @@
       "warning": 30,
       "critical": 20,
     },
-    "format": "{icon} {capacity}%",
-    "format-full": "{icon} {capacity}%",
-    "format-charging": " {capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{icon} {time}",
+    "format": "{icon}  {capacity}%",
+    "format-full": "{icon}  {capacity}%",
+    "format-charging": "  {capacity}% ",
+    "format-plugged": "{capacity}%  ",
+    "format-alt": "{icon}  {time}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "  {signalStrength}%",
+    "format-wifi": "    {signalStrength}%",
     "format-ethernet": "{ipaddr}/{cidr} ",
     "tooltip-format": "NAME: {essid}\nFREQUENCY: {frequency}\nIP: {ipaddr}\nGATEWAY: {gwaddr}\nNETMASK: {netmask}\nUPLOAD: {bandwidthUpBits}\nDOWNLOAD: {bandwidthDownBits}",
     "format-linked": "{ifname} (No IP) ",

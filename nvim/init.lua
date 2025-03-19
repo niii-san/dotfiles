@@ -26,7 +26,7 @@ require("lazy").setup({
     },
 
     install = {
-        colorscheme = { "tokyonight-night" },
+        colorscheme = { "material-darker" },
     },
     spec = {
         { import = "plugins" },
@@ -35,7 +35,7 @@ require("lazy").setup({
 
 
 -- Theme
-vim.cmd("colorscheme material-deep-ocean")
+vim.cmd("colorscheme material-darker")
 
 -- Set conceallevel to 2 to fully conceal Markdown tags
 vim.cmd([[
