@@ -23,6 +23,8 @@ alias net="nmtui"
 
 alias fm="nnn"
 
+alias stat="btop"
+
 
 
 
