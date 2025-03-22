@@ -26,10 +26,10 @@
   },
   
   "mpris": {
-    "format": "{status_icon} {status}   {player_icon} {player}    {dynamic}  ",
+    "format":"{status_icon}  {status}   {player_icon} {player}    {dynamic}  ",
     "tooltip-format": "{status_icon} {status} {player_icon}{player}   {title} {artist}\nAlbum: {album}\nLength: {length}",
     "interval": 0,
-    "dynamic-len": 45,
+    "dynamic-len": 65,
     "status-icons": {
       "playing": "▶",
       "paused": "⏸",
