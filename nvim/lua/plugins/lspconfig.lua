@@ -27,6 +27,11 @@ return {
                 capabilities = capabilities,
             })
 
+            -- Astro
+            lspconfig.astro.setup({
+                capabilities=capabilities
+            })
+
             --JSON
             lspconfig.jsonls.setup({
                 capabilities = capabilities,
@@ -57,6 +62,11 @@ return {
             --tailwind
             lspconfig.tailwindcss.setup({
                 capabilities = capabilities,
+                filetypes={
+                    "typescriptreact",
+                    "javascriptreact",
+                    "astro"
+                }
             })
 
             --html
@@ -91,6 +101,7 @@ return {
                     "pug",
                     "typescript",
                     "typescriptreact",
+                    "astro"
                 },
                 -- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
                 -- **Note:** only the options listed in the table are supported.
