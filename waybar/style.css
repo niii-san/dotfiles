@@ -48,15 +48,15 @@ window#waybar {
   margin: 0;
 }
 
-/* #workspaces button.focused { */
-/*     color: #abe9b3; */
-/*     border-top: 2px solid #abe9b3; */
-/*     border-bottom: 2px solid #abe9b3; */
-/* } */
+#workspaces button.focused {
+    color: #abe9b3;
+    border-top: 2px solid #abe9b3;
+    border-bottom: 2px solid #abe9b3;
+}
 
-/* #workspaces button.focused:hover { */
-/*     color: #e8a2af; */
-/* } */
+#workspaces button.focused:hover {
+    color: #e8a2af;
+}
 
 #workspaces button:hover {
   transition: none;
@@ -71,6 +71,14 @@ window#waybar {
   /* border-bottom: 2px solid white; */
   background-color: #e3e2e2;
   color: #222121;
+}
+
+#workspaces button.urgent {
+    background-color:#C52E2E;
+}
+
+#workspaces button.empty {
+   color: #4CAF50;
 }
 
 /* SYSTEM TRAY */
