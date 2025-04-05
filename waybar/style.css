@@ -75,6 +75,11 @@ window#waybar {
 
 #workspaces button.urgent {
     background-color:#C52E2E;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #workspaces button.empty {
@@ -110,15 +115,6 @@ window#waybar {
   background: #161320;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-#power-profiles-daemon {
-  margin-left: 15px;
-  border-radius: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #161320;
-  background: #f8bd96;
 }
 
 #power-profiles-daemon.performance {
