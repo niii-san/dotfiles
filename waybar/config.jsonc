@@ -27,7 +27,7 @@
         "tooltip-format": "btw",
     },
     "mpris": {
-        "format": "{status_icon}  {status}   {player_icon} {player}    {dynamic}  ",
+        "format": "{status_icon} {status}  {player_icon} {player}    {dynamic}  ",
         "tooltip-format": "{status_icon} {status} {player_icon}{player}   {title} {artist}\nAlbum: {album}\nLength: {length}",
         "interval": 0,
         "dynamic-len": 65,
@@ -54,11 +54,11 @@
         },
     },
     "clock": {
-        "format": "   {:%I:%M %p}",
+        "format": "  {:%I:%M %p}",
         "tooltip": false,
     },
     "clock#clock2": {
-        "format": "   {:%m/%d %a}",
+        "format": " {:%m/%d %a}",
         "format-alt": "{:%A %d %B, %Y }",
         "tooltip": true,
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -77,16 +77,16 @@
         },
     },
     "cpu": {
-        "format": "   {usage}%",
+        "format": " {usage}%",
         "tooltip": true,
         "interval": 2,
     },
     "memory": {
-        "format": "  {}%",
+        "format": " {}%",
         "interval": 2,
     },
     "backlight": {
-        "format": "{icon}  {percent}%",
+        "format": "{icon}{percent}%",
         "format-icons": [
             " ",
             " ",
@@ -105,11 +105,11 @@
             "warning": 30,
             "critical": 20,
         },
-        "format": "{icon}  {capacity}%",
-        "format-full": "{icon}  {capacity}%",
-        "format-charging": "  {capacity}% ",
-        "format-plugged": "{capacity}%  ",
-        "format-alt": "{icon}  {time}",
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{icon} {time}",
         "format-icons": [
             "󰂎",
             "󰁺",
@@ -126,7 +126,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "    {signalStrength}%",
+        "format-wifi": "  {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "NAME: {essid}\nFREQUENCY: {frequency}\nIP: {ipaddr}\nGATEWAY: {gwaddr}\nNETMASK: {netmask}\nUPLOAD: {bandwidthUpBits}\nDOWNLOAD: {bandwidthDownBits}",
         "format-linked": "{ifname} (No IP) ",
@@ -145,7 +145,7 @@
         "on-click": "blueman-manager",
     },
     "wireplumber": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon} {volume}%",
         "format-muted": "",
         "on-click": "pavucontrol",
         "format-icons": [
