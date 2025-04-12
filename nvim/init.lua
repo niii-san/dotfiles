@@ -2,7 +2,6 @@ vim.cmd("let mapleader =' ' ")
 require("preferences")
 require("keymaps")
 
-
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -26,16 +25,15 @@ require("lazy").setup({
     },
 
     install = {
-        colorscheme = { "material-darker" },
+        colorscheme = { "material-deep-ocean" },
     },
     spec = {
         { import = "plugins" },
     },
 })
 
-
 -- Theme
-vim.cmd("colorscheme material-darker")
+vim.cmd("colorscheme material-deep-ocean")
 
 -- Set conceallevel to 2 to fully conceal Markdown tags
 vim.cmd([[
