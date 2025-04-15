@@ -1,5 +1,18 @@
 # My personal [Arch + Hyprland] dotfiles
 
+- hyprland
+- neovim
+- tmux
+- kitty
+- waybar
+- rofi-wayland
+- fastfetch
+- waypaper
+- wlogout
+- swappy
+
+
+
 
 
 ## First clone the repo in your local machine

@@ -47,8 +47,6 @@ ln -s ~/dotfiles/wlogout ~/.config/wlogout  # yay package
 #waypaper 
 ln -s ~/dotfiles/waypaper ~/.config/waypaper
 
-
-
 # loading scripts
 ln -s ~/dotfiles/scripts ~/.config/scripts # custom scripts
 
