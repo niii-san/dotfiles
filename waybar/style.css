@@ -15,21 +15,6 @@ window#waybar {
     /* Keep transparent to blur */
 }
 
-#custom-arch {
-    font-size: 20px;
-    margin-left: 10px;
-    padding-left: 15px;
-    padding-right: 18px;
-    border-radius: 10px;
-    transition: none;
-    color: #89dceb;
-    background: #161320;
-}
-
-#custom-arch:hover {
-    color: #1793d1;
-}
-
 #workspaces {
     margin-left: 12px;
     font-size: 4px;
@@ -87,24 +72,26 @@ window#waybar {
 }
 
 /* SYSTEM TRAY */
+#cpu,
+#memory {
+    color: #89dceb;
+}
+
 #cpu {
     border-radius: 10px 0 0 10px;
-    padding-left: 15px;
-    padding-right: 10px;
-    margin-left: 15px;
+    padding-left: 25px;
+    padding-right: 7px;
     transition: none;
-    color: #161320;
-    background: #96cdfb;
+    background: #161320;
 }
 
 #memory {
-    margin-right: 15px;
+    margin-right: 30px;
     border-radius: 0 10px 10px 0;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
     transition: none;
-    color: #161320;
-    background: #96cdfb;
+    background: #161320;
 }
 
 #mpris {
@@ -118,34 +105,36 @@ window#waybar {
 }
 
 #clock {
-    border-radius: 10px 0px 0px 10px;
-    padding-left: 15px;
-    padding-right: 4px;
-    color: #161320;
-    background: #abe9b3;
+    border-radius: 11px 0px 0px 11px;
+    padding-left: 25px;
+    padding-right: 7px;
+    color: #89dceb;
+    background: #161320;
 }
 
 #clock.clock2 {
-    margin-right: 30px;
-    padding-right: 15px;
-    border-radius: 0px 10px 10px 0px;
+    margin-right: 20px;
+    padding-right: 25px;
+    border-radius: 0px 11px 11px 0px;
 }
 
 #backlight,
 #wireplumber,
 #battery {
     transition: none;
-    color: #161320;
-    background: #b5e8e0;
+    color: #89dceb;
+    background: #161320;
 }
 
 #backlight {
     border-radius: 10px 0px 0px 10px;
-    padding-left: 20px;
+    padding-left: 25px;
+    padding-right: 10px;
 }
 
 #wireplumber {
-    padding-left: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #wireplumber.muted {
@@ -154,19 +143,17 @@ window#waybar {
 
 #battery {
     padding-left: 10px;
-    padding-right: 20px;
+    padding-right: 25px;
     border-radius: 0px 10px 10px 0px;
-    margin-right: 30px;
+    margin-right: 60px;
 }
 
 #battery.charging,
 #battery.plugged {
-    color: #006a67;
-    background-color: #b5e8e0;
+    color: #16C47F;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #b5e8e0;
     color: #161320;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -185,8 +172,8 @@ window#waybar {
 #network,
 #bluetooth {
     transition: none;
-    color: #161320;
-    background: #ddb6f2;
+    color: #89dceb;
+    background: #161320;
 }
 
 #bluetooth.on {
@@ -200,7 +187,8 @@ window#waybar {
 
 #network {
     border-radius: 10px 0 0 10px;
-    padding-left: 20px;
+    padding-left: 25px;
+    padding-right: 15px;
 }
 
 #network.disconnected {
@@ -210,9 +198,9 @@ window#waybar {
 #bluetooth {
     font-size: 12px;
     border-radius: 0 10px 10px 0;
-    padding-right: 20px;
-    padding-left: 18px;
-    margin-right: 30px;
+    padding-right: 25px;
+    padding-left: 15px;
+    margin-right: 60px;
 }
 
 #custom-power {

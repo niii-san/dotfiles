@@ -1,173 +1,131 @@
 {
-    "layer": "top",
-    "height": 8, // Waybar height (to be removed for auto height)
-    "spacing": 0, // Gaps between modules (4px)
-    "modules-left": [
-        "custom/arch",
-        "cpu",
-        "memory",
-        "mpris"
-    ],
-    "modules-center": [
-        "hyprland/workspaces"
-    ],
-    "modules-right": [
-        "backlight",
-        "wireplumber",
-        "battery",
-        "network",
-        "bluetooth",
-        "clock",
-        "clock#clock2",
-        "custom/power",
-    ],
-    "custom/arch": {
-        "format": "󰣇",
-        "tooltip": true,
-        "tooltip-format": "btw",
+  "layer": "top",
+  "height": 8, // Waybar height (to be removed for auto height)
+  "spacing": 0, // Gaps between modules (4px)
+  "modules-left": ["clock", "clock#clock2", "mpris"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "backlight",
+    "wireplumber",
+    "battery",
+    "cpu",
+    "memory",
+    "custom/power",
+  ],
+  "mpris": {
+    "format": "{status_icon} {status}  {player_icon} {player}    {dynamic}  ",
+    "tooltip-format": "{status_icon} {status} {player_icon}{player}   {title} {artist}\nAlbum: {album}\nLength: {length}",
+    "interval": 0,
+    "dynamic-len": 65,
+    "status-icons": {
+      "playing": "▶",
+      "paused": "⏸",
+      "stopped": "",
     },
-    "mpris": {
-        "format": "{status_icon} {status}  {player_icon} {player}    {dynamic}  ",
-        "tooltip-format": "{status_icon} {status} {player_icon}{player}   {title} {artist}\nAlbum: {album}\nLength: {length}",
-        "interval": 0,
-        "dynamic-len": 65,
-        "status-icons": {
-            "playing": "▶",
-            "paused": "⏸",
-            "stopped": "",
-        },
-        "player-icons": {
-            "default": " ",
-            "spotify": " ",
-            "firefox": " ",
-            "mpv": "🎵",
-        },
-        "dynamic-order": [
-            "title",
-            "artist"
-        ],
-    }, // "ignored-players": ["firefox"]
-    "hyprland/workspaces": {
-        "all-outputs": true,
-        "persistent-workspaces": {
-            "*": 5, // 5 workspaces by default on every monitor
-        },
+    "player-icons": {
+      "default": " ",
+      "spotify": " ",
+      "firefox": " ",
+      "mpv": "🎵",
     },
-    "clock": {
-        "format": "  {:%I:%M %p}",
-        "tooltip": false,
+    "dynamic-order": ["title", "artist"],
+  }, // "ignored-players": ["firefox"]
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "persistent-workspaces": {
+      "*": 5, // 5 workspaces by default on every monitor
     },
-    "clock#clock2": {
-        "format": " {:%m/%d %a}",
-        "format-alt": "{:%A %d %B, %Y }",
-        "tooltip": true,
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode": "year",
-            "mode-mon-col": 3,
-            "weeks-pos": "right",
-            "on-scroll": 1,
-            "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "days": "<span color='#ecc6d9'><b>{}</b></span>",
-                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
-            },
-        },
+  },
+  "clock": {
+    "format": "  {:%I:%M %p}",
+    "tooltip": false,
+  },
+  "clock#clock2": {
+    "format": " {:%m/%d %a}",
+    "format-alt": "{:%A %d %B, %Y }",
+    "tooltip": true,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
     },
-    "cpu": {
-        "format": " {usage}%",
-        "tooltip": true,
-        "interval": 2,
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "interval": 2,
+  },
+  "memory": {
+    "format": " {}%",
+    "interval": 2,
+  },
+  "backlight": {
+    "format": "{icon}{percent}%",
+    "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "],
+  },
+  "battery": {
+    "states": {
+      "good": 80,
+      "warning": 30,
+      "critical": 20,
     },
-    "memory": {
-        "format": " {}%",
-        "interval": 2,
-    },
-    "backlight": {
-        "format": "{icon}{percent}%",
-        "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
-        ],
-    },
-    "battery": {
-        "states": {
-            "good": 80,
-            "warning": 30,
-            "critical": 20,
-        },
-        "format": "{icon} {capacity}%",
-        "format-full": "{icon} {capacity}%",
-        "format-charging": " {capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{icon} {time}",
-        "format-icons": [
-            "󰂎",
-            "󰁺",
-            "󰁻",
-            "󰁼",
-            "󰁽",
-            "󰁾",
-            "󰁿",
-            "󰂀",
-            "󰂁",
-            "󰂂",
-            "󰁹"
-        ],
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "NAME: {essid}\nFREQUENCY: {frequency}\nIP: {ipaddr}\nGATEWAY: {gwaddr}\nNETMASK: {netmask}\nUPLOAD: {bandwidthUpBits}\nDOWNLOAD: {bandwidthDownBits}",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "󰖪  0%",
-        "on-click": "kitty nmtui",
-    },
-    "bluetooth": {
-        "format": "",
-        "format-connected": "󰂱 ",
-        //	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
-        // "format-device-preference": [ "device1", "device2" ], // preferenceat Alam. list deciding the displayed device
-        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-        "on-click": "blueman-manager",
-    },
-    "wireplumber": {
-        "format": "{icon} {volume}%",
-        "format-muted": "",
-        "on-click": "pavucontrol",
-        "format-icons": [
-            "",
-            " ",
-            " ",
-            " "
-        ],
-    },
-    "custom/power": {
-        "format": "⏻",
-        "tooltip-format": "⏻  Power",
-        "on-click": "wlogout",
-    },
-    // "custom/wallpaper-previous": {
-    //     "on-click": "exec ~/.config/scripts/change_wallpaper_previous.sh",
-    //     "format": " ",
-    //     "tooltip-format": " Change Wallpaper (Previous) "
-    // },
-    // "custom/wallpaper-next": {
-    //     "on-click": "exec ~/.config/scripts/change_wallpaper_next.sh",
-    //     "format": " ",
-    //     "tooltip-format": " Change Wallpaper (Next) "
-    // }
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "NAME: {essid}\nFREQUENCY: {frequency}\nIP: {ipaddr}\nGATEWAY: {gwaddr}\nNETMASK: {netmask}\nUPLOAD: {bandwidthUpBits}\nDOWNLOAD: {bandwidthDownBits}",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "󰖪  0%",
+    "on-click": "kitty nmtui",
+  },
+  "bluetooth": {
+    "format": "",
+    "format-connected": "󰂱 ",
+    //	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    // "format-device-preference": [ "device1", "device2" ], // preferenceat Alam. list deciding the displayed device
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click": "blueman-manager",
+  },
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "on-click": "pavucontrol",
+    "format-icons": ["", " ", " ", " "],
+  },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip-format": "⏻  Power",
+    "on-click": "wlogout",
+  },
+  // "custom/wallpaper-previous": {
+  //     "on-click": "exec ~/.config/scripts/change_wallpaper_previous.sh",
+  //     "format": " ",
+  //     "tooltip-format": " Change Wallpaper (Previous) "
+  // },
+  // "custom/wallpaper-next": {
+  //     "on-click": "exec ~/.config/scripts/change_wallpaper_next.sh",
+  //     "format": " ",
+  //     "tooltip-format": " Change Wallpaper (Next) "
+  // }
 }
