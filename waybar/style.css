@@ -59,12 +59,23 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-    background-color: #c52e2e;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    background-color: #f38ba8;
+    color: #1e1e2e;
+    animation: urgent-pulse 0.8s ease infinite;
+}
+
+@keyframes urgent-pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 #workspaces button.empty {
@@ -79,14 +90,14 @@ window#waybar {
 
 #cpu {
     border-radius: 10px 0 0 10px;
-    padding-left: 25px;
+    padding-left: 10px;
     padding-right: 7px;
     transition: none;
     background: #161320;
 }
 
 #memory {
-    margin-right: 30px;
+    margin-right: 25px;
     border-radius: 0 10px 10px 0;
     padding-right: 25px;
     padding-left: 25px;
@@ -105,17 +116,18 @@ window#waybar {
 }
 
 #clock {
-    border-radius: 11px 0px 0px 11px;
-    padding-left: 25px;
-    padding-right: 7px;
-    color: #89dceb;
+    border-radius: 0px 11px 11px 0px;
+    padding-left: 15px;
+    padding-right: 20px;
+    color: #ffd63a;
     background: #161320;
 }
 
 #clock.clock2 {
-    margin-right: 20px;
-    padding-right: 25px;
-    border-radius: 0px 11px 11px 0px;
+    padding-right: 15px;
+    padding-left: 20px;
+    color: #89dceb;
+    border-radius: 11px 0px 0px 11px;
 }
 
 #backlight,
@@ -145,16 +157,19 @@ window#waybar {
     padding-left: 10px;
     padding-right: 25px;
     border-radius: 0px 10px 10px 0px;
-    margin-right: 60px;
+    margin-right: 70px;
 }
 
-#battery.charging,
+#battery.charging {
+    color: #16c47f;
+}
+
 #battery.plugged {
-    color: #16C47F;
+    color: #8576ff;
 }
 
 #battery.critical:not(.charging) {
-    color: #161320;
+    color: #b80f2b;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -200,26 +215,17 @@ window#waybar {
     border-radius: 0 10px 10px 0;
     padding-right: 25px;
     padding-left: 15px;
-    margin-right: 60px;
-}
-
-#custom-power {
-    transition: none;
-    color: #151515;
-    background: #d55151;
-    border-radius: 10px;
-    padding-left: 20px;
-    padding-right: 21px;
+    margin-right: 30px;
 }
 
 tooltip {
-    background: black;
-    border: 2px solid white;
-    padding: 0;
-    margin: 0;
+    background: rgba(30, 30, 46, 0.95);
+    border: 1px solid #585b70;
+    border-radius: 12px;
+    padding: 8px 16px;
 }
 
 tooltip label {
-    color: white;
-    font-size: small;
+    color: #cdd6f4;
+    font-size: 12px;
 }

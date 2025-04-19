@@ -70,7 +70,7 @@ collage(){
 run_pgadmin(){
     cd ~/pgadmin4
     echo "Activating python virtual environment"
-    source pgadmin/bin/activate
+    source venv/bin/activate
     echo "virtual environment activated " $VIRTUAL_ENV 
     which python
     sleep 3
