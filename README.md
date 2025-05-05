@@ -17,13 +17,13 @@
 
 # To install my dotfiles just run the following command in bash
 ```bash
-source <(curl -s https://www.nishanbista/dotfiles.sh)
+source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 ```
 
 ### What happens running this command?
 - Clone my dotfiles into your home directory
 - Create symlinks to the config files in the appropriate directories.
-- It will also install the necessary packages and dependencies for my setup. *Optional*
+- It will also install the necessary packages and dependencies for my setup. (*Optional*)
 
 
 
