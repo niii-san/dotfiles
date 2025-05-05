@@ -1,4 +1,4 @@
-# My personal [Arch + Hyprland] dotfiles
+# My personal [Arch linux + Hyprland] dotfiles
 
 - hyprland
 - neovim
@@ -15,22 +15,16 @@
 
 
 
-## First clone the repo in your local machine
+# To install my dotfiles just run the following command in bash
 ```bash
-
-git clone https://github.com/nii-shaan/dotfiles  
+curl -sSL https://nishanbista.com/dotfiles.sh | bash
 
 ```
 
+### What happens running this command?
+- Clone my dotfiles into your home directory
+- Create symlinks to the config files in the appropriate directories.
+- It will also install the necessary packages and dependencies for my setup. *Optional*
 
 
-## Run install.sh 
-`Running install.sh will install packages and load the dotfiles`
 
-```bash
-
-cd dotfiles
-
-./install.sh
-
-```
