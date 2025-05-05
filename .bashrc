@@ -3,11 +3,22 @@
 #
 
 
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
+
+
+## Modules
+configs="$HOME/.config/bashconfigs/"
+# Environment variables
+source "$configs/env.sh"
+
+
+
+
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -19,7 +30,7 @@ PS1='[\u@\h \W]\$ '
 alias ll="ls -alh"
 alias net="nmtui"
 
-alias fm="nnn"
+alias fm="yazi"
 
 alias stat="btop"
 

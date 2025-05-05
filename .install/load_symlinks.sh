@@ -50,6 +50,12 @@ ln -s ~/dotfiles/waypaper ~/.config/waypaper
 # loading scripts
 ln -s ~/dotfiles/scripts ~/.config/scripts # custom scripts
 
+# bash configs
+ln -s ~/dotfiles/bashconfigs ~/.config/bashconfigs
+
+# yazi 
+ln -s ~/dotfiles/yazi ~/.config/yazi
+
 
 
 # If .bashrc already exists then removing it
