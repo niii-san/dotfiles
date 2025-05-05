@@ -300,7 +300,7 @@
       ":: {device_alias}: 󱊣 {device_battery_percentage}%",
 
     "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
-    "on-click-right": "kitty --title '󰂯  Bluetooth TUI' bash -c bluetui",
+    "on-click-right": "blueman-manager",
     "interval": 1,
     "min-length": 1,
     "max-length": 1

@@ -67,7 +67,7 @@ listview {
   border:                   2px 0 0 0;
   border-radius:            8px;
   border-color:             @main-br;
-  lines:                    6;
+  lines:                    10;
   fixed-height:             false;
   dynamic:                  false;
   cycle:                    false;

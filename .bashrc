@@ -16,8 +16,6 @@ PS1='[\u@\h \W]\$ '
 
 
 #### ALIAS
-alias nv="nvim"
-
 alias ll="ls -alh"
 alias net="nmtui"
 

@@ -1,63 +1,76 @@
 @import "theme.css";
 
 * {
-    min-height: 0;
-    border: none;
-    margin: 0;
-    padding: 0;
+  min-height: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* ----------------------------------------------------- MAIN BACKGROUND --- */
 
-window#waybar>box {
-    background: @main-bg;
-    margin: 2px;
-        margin-bottom: 1px;
+window#waybar > box {
+  background: @main-bg;
+  margin: 2px;
+  margin-bottom: 0px;
 }
 
 /* --------------------------------------------------------- DROP SHADOW --- */
 
 window#waybar {
-    background: @shadow;
+  background: @shadow;
 }
 
 /* ------------------------------------------------------------ TOOLTIPS --- */
 
 tooltip {
-    background: @main-bg;
-    border: 1.5px solid @main-br;
-    border-radius: 8px;
+  background: @main-bg;
+  border: 1.5px solid @main-br;
+  border-radius: 8px;
 }
 
 tooltip label {
-    color: @main-fg;
-    margin: -1.5px 3px;
+  color: @main-fg;
+  margin: -1.5px 3px;
 }
 
 /* ---------------------------------------- WORKSPACE BUTTONS and LABELS --- */
 
 #workspaces button {
-    color: @module-fg;
-    border-radius: 8px;
-    box-shadow: none;
-    margin: 2px 0;
-    padding: 0 2px;
-    transition: none;
+  color: @module-fg;
+  border-radius: 8px;
+  box-shadow: none;
+  margin: 2px 0;
+  padding: 0 2px;
+  transition: none;
 }
 
 #workspaces button:hover {
-    color: @hover-fg;
-    background: @hover-bg;
-    text-shadow: none;
+  color: @hover-fg;
+  background: @hover-bg;
+  text-shadow: none;
 }
 
 #workspaces button.active {
-    color: @active-fg;
-    background: @active-bg;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
-    margin: 2px;
-    padding: 0 6px;
+  color: @active-fg;
+  background: @active-bg;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+  margin: 2px;
+  padding: 0 6px;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#workspaces button.empty {
+  color: @green;
 }
 
 /* ------------------------------------------------------------- GENERAL --- */
@@ -78,9 +91,9 @@ tooltip label {
 #backlight,
 #battery,
 #custom-power {
-    opacity: 1;
-    color: @module-fg;
-    padding: 0 4px;
+  opacity: 1;
+  color: @module-fg;
+  padding: 0 4px;
 }
 
 #custom-left1,
@@ -91,8 +104,8 @@ tooltip label {
 #custom-left6,
 #custom-left7,
 #custom-left8 {
-    margin-bottom: 0;
-    text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0;
+  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
 }
 
 #custom-right1,
@@ -100,9 +113,9 @@ tooltip label {
 #custom-right3,
 #custom-right4,
 #custom-right5 {
-    margin-bottom: 0;
-    padding-right: 3px;
-    text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0;
+  padding-right: 3px;
+  text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
 }
 
 /* ------------------------------------------------------------- MODULES --- */
@@ -110,199 +123,199 @@ tooltip label {
 /* --------------------------------------------------------- window icon --- */
 
 #custom-ws {
-    background: @main-bg;
+  background: @main-bg;
 }
 
 #custom-ws:hover {
-    color: @hover-fg;
+  color: @hover-fg;
 }
 
 /* ---------------------------------------------------------- workspaces --- */
 
 #custom-left1 {
-    color: @workspaces;
-    background: @main-bg;
-    margin-bottom: 0;
-    padding-left: 2px;
+  color: @workspaces;
+  background: @main-bg;
+  margin-bottom: 0;
+  padding-left: 2px;
 }
 
 #workspaces {
-    background: @workspaces;
+  background: @workspaces;
 }
 
 #custom-right1 {
-    color: @workspaces;
-    background: @main-bg;
-    text-shadow: 3px 0 2px rgba(0, 0, 0, 0.4);
-    margin-bottom: 0;
+  color: @workspaces;
+  background: @main-bg;
+  text-shadow: 3px 0 2px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0;
 }
 
 /* --------------------------------------------------------- temperature --- */
 
 #custom-paddc {
-    padding-right: 22px;
+  padding-right: 22px;
 }
 
 #custom-left2 {
-    color: @cpuinfo;
-    background: @main-bg;
-    padding-left: 3px;
+  color: @cpuinfo;
+  background: @main-bg;
+  padding-left: 3px;
 }
 
 #custom-cpuinfo {
-    background: @cpuinfo;
-    padding: 0 0 0 1px;
+  background: @cpuinfo;
+  padding: 0 0 0 1px;
 }
 
 /* -------------------------------------------------------------- memory --- */
 
 #custom-left3 {
-    color: @memory;
-    background: @cpuinfo;
-    padding-left: 3px;
+  color: @memory;
+  background: @cpuinfo;
+  padding-left: 3px;
 }
 
 #memory {
-    background: @memory;
-    padding: 0 0 0 1px;
+  background: @memory;
+  padding: 0 0 0 1px;
 }
 
 #memory.warning {
-    color: @warning;
+  color: @warning;
 }
 
 #memory.critical {
-    color: @critical;
+  color: @critical;
 }
 
 /* ----------------------------------------------------------------- cpu --- */
 
 #custom-left4 {
-    color: @cpu;
-    background: @memory;
-    padding-left: 3px;
+  color: @cpu;
+  background: @memory;
+  padding-left: 3px;
 }
 
 #cpu {
-    background: @cpu;
+  background: @cpu;
 }
 
 #custom-leftin1 {
-    color: @cpu;
-    margin-bottom: -1px;
+  color: @cpu;
+  margin-bottom: -1px;
 }
 
 /* --------------------------------------------------------- distro icon --- */
 
 #custom-left5 {
-    color: @distro-bg;
-    background: @main-bg;
-    text-shadow: none;
-    margin-bottom: -2px;
-    padding-left: 3px;
+  color: @distro-bg;
+  background: @main-bg;
+  text-shadow: none;
+  margin-bottom: -2px;
+  padding-left: 3px;
 }
 
 #custom-distro {
-    color: @distro-fg;
-    background: @distro-bg;
-    margin: 0 -1px -2px 0;
-    padding: 0 0 0 3px;
-    text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
+  color: @distro-fg;
+  background: @distro-bg;
+  margin: 0 -1px -2px 0;
+  padding: 0 0 0 3px;
+  text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
 }
 
 #custom-right2 {
-    color: @distro-bg;
-    background: @main-bg;
-    text-shadow: none;
-    margin-bottom: -2px;
+  color: @distro-bg;
+  background: @main-bg;
+  text-shadow: none;
+  margin-bottom: -2px;
 }
 
 /* ---------------------------------------------------------------- time --- */
 
 #custom-rightin1 {
-    color: @time;
-    margin-bottom: -1px;
+  color: @time;
+  margin-bottom: -1px;
 }
 
 #idle_inhibitor {
-    background: @time;
-    padding: 0 0 0 7px;
+  background: @time;
+  padding: 0 0 0 7px;
 }
 
 #idle_inhibitor:hover {
-    color: @hover-fg;
+  color: @hover-fg;
 }
 
 #clock.time {
-    background: @time;
-    margin-left: -2px;
-    padding: 0 3px 0 0;
+  background: @time;
+  margin-left: -2px;
+  padding: 0 3px 0 0;
 }
 
 #custom-right3 {
-    color: @time;
-    background: @date;
+  color: @time;
+  background: @date;
 }
 
 /* ---------------------------------------------------------------- date --- */
 
 #clock.date {
-    background: @date;
+  background: @date;
 }
 
 #clock.date:hover {
-    color: @hover-fg;
+  color: @hover-fg;
 }
 
 #custom-right4 {
-    color: @date;
-    background: @tray;
+  color: @date;
+  background: @tray;
 }
 
 /* ---------------------------------------------------------------- tray --- */
 
 #custom-wifi {
-    background: @tray;
-    padding: 0 15px 0 10px;
+  background: @tray;
+  padding: 0 15px 0 10px;
 }
 
 #custom-wifi:hover {
-    color: @hover-fg;
+  color: @hover-fg;
 }
 
 #bluetooth {
-    background: @tray;
-    padding-right: 15px;
-    padding-left: 10px;
+  background: @tray;
+  padding-right: 15px;
+  padding-left: 10px;
 }
 
 #bluetooth:hover {
-    color: @hover-fg;
+  color: @hover-fg;
 }
 
 #custom-update {
-    padding-right: 8px;
-    background: @tray;
+  padding-right: 8px;
+  background: @tray;
 }
 
 #custom-update:hover {
-    color: @hover-fg;
+  color: @hover-fg;
 }
 
 #custom-right5 {
-    color: @tray;
-    background: @main-bg;
+  color: @tray;
+  background: @main-bg;
 }
 
 /* ---------------------------------------------------------- media info --- */
 
 #mpris {
-    background: @main-bg;
-    padding: 0 8px 0;
+  background: @main-bg;
+  padding: 0 8px 0;
 }
 
 #mpris:hover {
-    color: @hover-fg;
+  color: @hover-fg;
 }
 
 /*
@@ -310,98 +323,99 @@ tooltip label {
 */
 
 #custom-left6 {
-    color: @pulseaudio;
-    background: @main-bg;
-    padding-left: 3px;
+  color: @pulseaudio;
+  background: @main-bg;
+  padding-left: 3px;
 }
 
 #pulseaudio {
-    background: @pulseaudio;
+  background: @pulseaudio;
 }
 
 #pulseaudio:hover {
-    color: @hover-fg;
+  color: @hover-fg;
 }
 
 /* ---------------------------------------------------------- brightness --- */
 
 #custom-left7 {
-    color: @backlight;
-    background: @pulseaudio;
-    padding-left: 2px;
+  color: @backlight;
+  background: @pulseaudio;
+  padding-left: 2px;
 }
 
 #backlight {
-    background: @backlight;
+  background: @backlight;
 }
 
 /* ------------------------------------------------------------- battery --- */
 
 #custom-left8 {
-    color: @battery;
-    background: @backlight;
-    padding-left: 2px;
+  color: @battery;
+  background: @backlight;
+  padding-left: 2px;
 }
 
 #battery {
-    color: @module-fg;
-    background: @battery;
+  color: @module-fg;
+  background: @battery;
 }
 
 #battery.warning {
-    color: @warning;
+  color: @warning;
 }
 
 #battery.critical {
-    color: @critical;
+  color: @critical;
 }
 
 #battery.charging {
-    color: @charging;
+  color: @charging;
 }
 
 #battery.plugged {
-    color: #8576ff;
+  color: #8576ff;
 }
 
 #battery.critical:not(.charging) {
-    color: @red;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  color: @red;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+
 @keyframes blink {
-    to {
-        background-color: @red;
-        color: #b5e8e0;
-    }
+  to {
+    background-color: @red;
+    color: #b5e8e0;
+  }
 }
 
 /* -------------------------------------------------------- power button --- */
 
 #custom-leftin2 {
-    color: @battery;
-    background: @main-bg;
-    margin-bottom: -1px;
+  color: @battery;
+  background: @main-bg;
+  margin-bottom: -1px;
 }
 
 #custom-power {
-    color: @main-bg;
-    background: @power;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    margin: 2px 4px 2px 0;
-    padding: 0 6px 0 9px;
+  color: @main-bg;
+  background: @power;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin: 2px 4px 2px 0;
+  padding: 0 6px 0 9px;
 }
 
 #custom-power:hover {
-    color: @hover-fg;
-    background: @hover-bg;
-    text-shadow: none;
-    box-shadow: none;
+  color: @hover-fg;
+  background: @hover-bg;
+  text-shadow: none;
+  box-shadow: none;
 }
 
 /* ---------------------------------------------------------- FONT SIZES --- */
@@ -419,15 +433,15 @@ tooltip label {
 */
 
 * {
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 14px;
-    font-weight: bold;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+  font-weight: bold;
 }
 
 tooltip label,
 #window label,
 #mpris {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 /* ----------------------------------------------- left and right arrows --- */
@@ -445,7 +459,7 @@ tooltip label,
 #custom-right3,
 #custom-right4,
 #custom-right5 {
-    font-size: 18.68px;
+  font-size: 18.68px;
 }
 
 /* ---------------------------------------------- left and right inverse --- */
@@ -453,18 +467,18 @@ tooltip label,
 #custom-leftin1,
 #custom-leftin2,
 #custom-rightin1 {
-    font-size: 19.5px;
+  font-size: 19.5px;
 }
 
 /* -------------------------------------------------------------- distro --- */
 
 #custom-distro {
-    font-size: 18.6px;
+  font-size: 18.6px;
 }
 
 #custom-left5,
 #custom-right2 {
-    font-size: 19.68px;
+  font-size: 19.68px;
 }
 
 /*
@@ -473,16 +487,15 @@ tooltip label,
 */
 
 #workspaces button {
-    border-radius: 8px;
-    padding: 0 12px 0 12px;
-
+  border-radius: 8px;
+  padding: 0 12px 0 12px;
 }
 
 #workspaces button.active {
-padding: 0 12px 0 12px;
+  padding: 0 12px 0 12px;
 }
 
 #custom-power {
-    border-radius: 10px;
-    padding: 0 6px 0 9px;
+  border-radius: 10px;
+  padding: 0 6px 0 9px;
 }
