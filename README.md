@@ -17,7 +17,7 @@
 
 # To install my dotfiles just run the following command in bash
 ```bash
-source <(curl -s http://localhost:4321/dotfiles.sh)
+source <(curl -s https://www.nishanbista/dotfiles.sh)
 ```
 
 ### What happens running this command?
