@@ -17,7 +17,7 @@
 
 # To install my dotfiles just run the following command in bash
 ```bash
-curl -sSL https://nishanbista.com/dotfiles.sh | bash
+curl -s https://www.nishanbista.com/dotfiles.sh | bash
 
 ```
 
