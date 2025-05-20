@@ -1,4 +1,34 @@
 
+/* colors  */
+@define-color red             #f38ba8;
+@define-color yellow          #f9e2af;
+
+
+/* custom */
+@define-color background      #11111b;
+@define-color text      #cdd6f4;
+@define-color workspace-bg     #2e2f3e;
+@define-color workspace-fg @text;
+@define-color workspace-empty-fg #a6e3a1;
+@define-color workspace-active-bg #9399b2;
+@define-color workspace-active-fg #11111b;
+
+@define-color module-bg #272834;
+
+@define-color power-bg #f38ba8;
+
+@define-color battery-warning @yellow;
+@define-color battery-charging #a6e3a1;
+@define-color battery-plugged #89b4fa;
+
+@define-color mpris-bg #23242f;
+
+
+
+
+
+
+
 
 
 * {
@@ -22,33 +52,38 @@ tooltip label {
   margin: 3px;
 }
 
-window#waybar {
-    background: transparent;
-    color: white;
+.module{
+    background: @module-bg;
 }
+/* window#waybar { */
+/* } */
 
 window#waybar > box {
-  background: black;
+  background: @background;
   margin-bottom: 0px;
+  color: white;
+  padding: 2px;
 }
 
-@keyframes blink {
-    100% { background-color:red ; }
-    60% { background-color: green }
-    50% { background-color: yellow; }
+@keyframes pulse {
+    50% { color:@red ; }
+    100% { color: red; }
+
 }
 
 /* ----------- Modules ----------- */
 .module {
     padding: 0 10px;
     /* background: ; */
-    border-radius: 8px;
 }
 
 /* Workspaces */
-/* #workspaces{ */
-/*     padding:0px; */
-/* } */
+#workspaces{
+    padding:0px;
+    background: @workspace-bg;
+    border-radius: 8px;
+    color:@workspace-fg;
+}
 
 #workspaces button {
   /* color: ; */
@@ -58,18 +93,19 @@ window#waybar > box {
   transition: none;
 }
 
+#workspaces button.active {
+  color: @workspace-active-fg;
+  background: @workspace-active-bg;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+}
+
 #workspaces button:hover {
   /* color: ; */
   /* background: ; */
   text-shadow: none;
 }
 
-#workspaces button.active {
-  /* color: ; */
-  /* background: ; */
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
-}
 
 #workspaces button.urgent {
   /* background-color: ; */
@@ -81,14 +117,34 @@ window#waybar > box {
 }
 
 #workspaces button.empty {
-  color: green;
+  color: @workspace-empty-fg;
 }
 
 /* System Info */
 #cpu, #memory, #custom-cpuinfo {
-    background: rgba(25, 25, 38, 0.6);
     padding:0;
 }
+
+#custom-cpuinfo{
+    border-radius: 8px 0px 0px 8px;
+    margin-left: 20px;
+
+}
+
+#cpu {
+
+}
+
+#memory{
+    border-radius: 0px 8px 8px 0px;
+    margin-right: 20px;
+
+}
+
+#window{
+    background: none;
+}
+
 
 
 /* #wireplumbler, #backlight, #custom-wifi,#bluetooth,#battery{ */
@@ -99,39 +155,71 @@ window#waybar > box {
 
 /* Media Control */
 #mpris {
-    /* background: ; */
+    background: @mpris-bg;
     border-radius: 8px;
     padding: 0 16px;
     margin-left: 8px;
 }
 
-/* Power Button */
-#custom-power {
-    /* color: ; */
-    background: rgba(243, 139, 168, 0.15);
-    border-radius: 8px;
-    transition: all 0.2s ease;
+
+ /* #custom-power:hover {  */
+ /*  }  */
+
+#wireplumber, #backlight,#bluetooth,#network,#battery{
+    background-color: @module-bg;
+
+
+}
+#wireplumber{
+    border-radius: 8px 0px 0px 8px;
+    margin-left: 10px;
 }
 
-#custom-power:hover {
-    /* background: ; */
-    /* color: ; */
-}
+/* #network{ */
+/**/
+/* } */
 
 /* Battery */
 #battery {
+    border-radius: 0px 8px 8px 0px;
+    margin-right: 20px;
     /* color: ; */
-    background: rgba(166, 227, 161, 0.1);
 }
 
 #battery.critical {
     /* color: ; */
-    animation: blink 1s infinite;
+    animation: pulse 0.5s linear infinite alternate;
+}
+
+#battery.warning {
+    color: @battery-warning;
+}
+
+#battery.charging {
+    color: @battery-charging;
+}
+
+#battery.plugged {
+    color: @battery-plugged;
+}
+
+#network.disconnected {
+    color:red;
 }
 
 /* Time */
 #clock {
     font-weight: bold;
-    background: linear-gradient(145deg, @surface0 0%, @module-bg 100%);
+    background: none;
+}
+#idle_inhibitor{
+    background: none;
+}
+
+/* Power Button */
+#custom-power{
+    background: @power-bg;
+    border-radius: 8px;
+    padding: 0px 8px 0px 13px;
 }
 

@@ -4,30 +4,33 @@
   "mode": "dock",
   "reload_style_on_change": true,
   "gtk-layer-shell": true,
+    "height": 25,
 
   // <<--< Positions >-->>
 
   "modules-left": [
     "hyprland/workspaces",  // workspaces
-    "cpu",                  // cpu
     "custom/cpuinfo",       // temperature
+    "cpu",                  // cpu
     "memory",               // memory
     "hyprland/window"       // window title
   ],
 
   "modules-center": [
     "clock#time",           // time
-    "idle_inhibitor",       // idle inhibitor
-    "clock#date"           // date
+    "clock#date" ,          // date
+    "idle_inhibitor"       // idle inhibitor
   ],
 
   "modules-right": [
+    "cava",
     "mpris",                // media info
     "wireplumber",           // output device
     "backlight",            // brightness
-    "custom/wifi",          // wi-fi
     "bluetooth",            // bluetooth
+    "network",
     "battery",              // battery
+    "tray",
     "custom/power"         // power button
   ],
 
@@ -44,6 +47,30 @@
       "5": []
     }
   },
+
+    "cava": {
+       "cava_config": "~/.config/cava/config",
+        "framerate": 30,
+        "autosens": 1,
+        "sensitivity": 100,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+                   "on-click-right": "mode"
+                   }
+    },
+
 
   "hyprland/window": {
     "format": "{}",
@@ -221,15 +248,18 @@
     }
   },
 
-  "custom/wifi": {
-    "exec": "~/.config/waybar/scripts/wifi-status.sh",
-    "return-type": "json",
-    "format": "{}",
+  "network": {
     "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
     "on-click-right": "kitty --title '󰤨  Network Manager TUI' bash -c nmtui",
-    "interval": 1,
-    "min-length": 1,
-    "max-length": 1
+
+    "format": "{ifname}",
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "󰊗 {ipaddr}/{cidr}",
+    "format-disconnected": "󰖪 0%", 
+    "tooltip-format": "{essid} {ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected"
   },
 
   "bluetooth": {
@@ -272,13 +302,12 @@
     "tooltip-format": "Playing: {title} - {artist}",
     "tooltip-format-paused": "Paused: {title} - {artist}",
     "min-length": 5,
-    "max-length": 35
+    "max-length": 40
   },
 
   "wireplumber": {
     "format": "{icon} {volume}%",
     "format-muted": "󰝟 {volume}%",
-
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"],
       "headphone": "󰋋",
@@ -287,6 +316,7 @@
 
     "tooltip-format": "Device: {desc}",
     "on-click": "~/.config/waybar/scripts/volume-control.sh -o m",
+    "on-click-right": "pavucontrol",
     "on-scroll-up": "~/.config/waybar/scripts/volume-control.sh -o i",
     "on-scroll-down": "~/.config/waybar/scripts/volume-control.sh -o d",
     "min-length": 6,
@@ -305,15 +335,14 @@
 
   "battery": {
     "states": {
-      "warning": 20,
-      "critical": 10
+      "warning": 30,
+      "critical": 20
     },
 
     "format": "{icon} {capacity}%",
     "format-icons": ["󰂎", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-
+    "format-plugged": " {capacity}%",
     "tooltip-format": "Discharging: {time}",
     "tooltip-format-charging": "Charging: {time}",
     "interval": 1,
