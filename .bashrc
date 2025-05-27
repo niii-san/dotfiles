@@ -87,13 +87,17 @@ run_pgadmin(){
 }
 
 
-
-
-
-
 eval "$(starship init bash)"
  # Set up fzf key bindings and fuzzy completion
 #eval "$(fzf --bash)"
+
+
+# Execute on shell load
+quote
+
+
+
+
 
 
 

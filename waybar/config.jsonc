@@ -224,9 +224,7 @@
   },
 
   "network": {
-    "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
-    "on-click-right": "kitty --title '󰤨  Network Manager TUI' bash -c nmtui",
-
+    "on-click": "kitty --title '󰤨  Network Manager TUI' bash -c nmtui",
     "format": "{ifname}",
     "format-wifi": "  {signalStrength}%",
     "format-ethernet": "󰊗 {ipaddr}/{cidr}",
@@ -253,9 +251,7 @@
       "{device_alias}",
     "tooltip-format-enumerate-connected-battery": 
       ":: {device_alias}: 󱊣 {device_battery_percentage}%",
-
-    "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
-    "on-click-right": "blueman-manager",
+    "on-click": "blueman-manager",
     "interval": 1,
     "min-length": 1,
     "max-length": 1
@@ -288,7 +284,6 @@
       "headphone": "󰋋",
       "headset": "󰋋"
     },
-
     "tooltip-format": "Device: {desc}",
     "on-click": "~/.config/waybar/scripts/volume-control.sh -o m",
     "on-click-right": "pavucontrol",

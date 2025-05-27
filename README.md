@@ -1,29 +1,101 @@
-# My personal [Arch linux + Hyprland] dotfiles
+# 🧠 My Personal Dotfiles – Arch Linux + Hyprland
 
-- hyprland
-- neovim
-- tmux
-- kitty
-- waybar
-- rofi-wayland
-- fastfetch
-- waypaper
-- wlogout
-- swappy
+Welcome to my custom dotfiles setup tailored for an **Arch Linux** system running **Hyprland**.
+This setup is designed for a minimal yet productive desktop environment with useful tools, beautiful visuals, and efficient keybindings.
 
+---
 
+# Preview
+![Preview](./preview1.png)
+![Preview](./preview2.png)
+![Neovim](./nvim_preview.png)
 
+## ⚡ Quick Installation
 
+To install my dotfiles and get started instantly, run:
 
-# To install my dotfiles just run the following command in bash
 ```bash
 source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 ```
 
 ### What happens running this command?
-- Clone my dotfiles into your home directory
-- Create symlinks to the config files in the appropriate directories.
-- It will also install the necessary packages and dependencies for my setup. (*Optional*)
+- Clones my dotfiles into your home directory.
+- Creates symbolic links to place configs in their proper locations.
+- (Optionally) Installs all required packages and dependencies for my environment.
+
+# Packages
+##  pacman packages
+- `btop` – Modern resource monitor
+- `cava` – Terminal audio visualizer
+- `dunst` – Lightweight notification daemon
+- `fastfetch` – System info fetcher
+- `kitty` – GPU-accelerated terminal
+- `neovim` – Modern Vim-based text editor
+- `rofi-wayland` – Launcher/dmenu replacement
+- `tmux` – Terminal multiplexer
+- `waybar` – Status bar for Wayland
+- `starship` – Cross-shell prompt
+- `waypaper` – Wallpaper manager
+- `blueman-manager` – Bluetooth manager
+
+#### 🗂️ GUI File Manager
+- `thunar`
+- `gvfs` – Mount and access network shares/devices
+- `thunar-archive-plugin` – Archive creation/extraction
+- `thunar-media-tags-plugin` – Edit audio metadata
+
+##### 🔎 Thumbnail Support
+- `tumbler`
+- `ffmpegthumbnailer`
+
+#### hypr 
+- `hyprland`
+- `hypridle` - Idle handler
+- `hyprlock` - Lock screen
+- `hyprpaper` - Wallpaper daemon
+
+#### Screenshot tools
+- `grim` - Screenshot utility
+- `slurp` - Select area for screenshot
+- `swappy` - Annotate screenshots
+- `imagemagick` - Image editing suite
+
+## AUR packages
 
 
+# Keybindings
+## Rofi
+- `SUPER + Space` - Toogle rofi dmenu
 
+## Screenshot
+- `SUPER + ALT + 0` - Take a screenshot of selected area 
+- `SUPER + ALT + SHIFT + 0` - Take a screenshot of the entire screen
+
+## Wallpaper 
+- `SUPER + W` - Open wallpaper selector (_waypaper_). **wallpapers directory should be `~/wallpapers`**
+- `SUPER + SHIFT + W` - Toogle wallpaper (_enable/disable hyprpaper_)
+
+## Waybar
+- `SUPER + SHIFT + B` - Toggle waybar visibility
+- `left click network` - Open wifi nmtui
+- `left click bluetooth` - Open bluetooth blueman-manager
+- `left click volume` - Open pavucontrol
+
+## Power menu
+- `super + O ` Open power menu
+
+## Others
+- `SUPER + P` - Play/Pause media
+- `SUPER + E` - Open terminal
+- `SUPER + C` - Kill active window
+- `SUPER + Q` - Open file manager
+- `SUPER + SHIFT + T` - Make active window floating
+- `SUPER + SHIFT + J` - Toggle split orientation
+- `SUPER + SHIFT + K` - Swap split 
+- `SUPER + vim (HJKL)` - Switch focus 
+- `SUPER + arrow keys` - Switch focus  
+- `SUPER + SHIFT + arrow keys` - Resize window
+
+- `SUPER + SHIFT + M` - Exit hyprland
+
+# Feel free to customize and use <3!
