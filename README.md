@@ -1,8 +1,7 @@
 # 🧠 My Personal Dotfiles – Arch Linux + Hyprland
 
-Welcome to my custom dotfiles setup tailored for an **Arch Linux** system running **Hyprland**.
-This setup is designed for a minimal yet productive desktop environment with useful tools, beautiful visuals, and efficient keybindings.
-
+Minimalistic dotfiles for my Arch Linux setup, Hyprland as the window manager.
+This configuration is designed to be lightweight, fast, and easy to use, with a focus on minimalism.
 ---
 
 # Preview
@@ -37,6 +36,8 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - `starship` – Cross-shell prompt
 - `waypaper` – Wallpaper manager
 - `blueman-manager` – Bluetooth manager
+- `pavucontrol` – volume control
+- `yazi` – Tui file manager
 
 #### 🗂️ GUI File Manager
 - `thunar`
@@ -48,7 +49,7 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - `tumbler`
 - `ffmpegthumbnailer`
 
-#### hypr 
+#### Hyprland Ecosystem 
 - `hyprland`
 - `hypridle` - Idle handler
 - `hyprlock` - Lock screen
@@ -88,8 +89,11 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - `SUPER + P` - Play/Pause media
 - `SUPER + E` - Open terminal
 - `SUPER + C` - Kill active window
-- `SUPER + Q` - Open file manager
-- `SUPER + SHIFT + T` - Make active window floating
+- `SUPER + Q` - Open file manager (_In float mode_)
+- `SUPER + T` - Float window
+- `SUPER + SHIFT + T` - Float all windows
+- `SUPER + F` - Toggle fullscreen 
+- `SUPER + SHIFT + F` - Maximize window
 - `SUPER + SHIFT + J` - Toggle split orientation
 - `SUPER + SHIFT + K` - Swap split 
 - `SUPER + vim (HJKL)` - Switch focus 
