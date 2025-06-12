@@ -109,8 +109,8 @@ window#waybar > box {
 
 #workspaces button.urgent {
   /* background-color: ; */
-  animation-name: blink;
-  animation-duration: 0.5s;
+  animation-name: pulse;
+  animation-duration: 0.4s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -188,7 +188,7 @@ window#waybar > box {
 
 #battery.critical {
     /* color: ; */
-    animation: pulse 0.5s linear infinite alternate;
+    animation: pulse 0.4s linear infinite alternate;
 }
 
 #battery.warning {
