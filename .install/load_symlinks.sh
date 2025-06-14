@@ -56,6 +56,9 @@ ln -s ~/dotfiles/bashconfigs ~/.config/bashconfigs
 # yazi 
 ln -s ~/dotfiles/yazi ~/.config/yazi
 
+# Alacritty
+ln -s ~/dotfiles/alacritty ~/.config/alacritty
+
 
 
 # If .bashrc already exists then removing it

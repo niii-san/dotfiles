@@ -1,8 +1,8 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/images/\" -name \"*.png\" | shuf -n 1)",
-        "type": "kitty-direct"
+        "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/ascii/\" -name \"*.txt\" | shuf -n 1)",
+        "type": "file"
     },
     "display": {
         "separator": "  > "
@@ -42,6 +42,12 @@
         {
             "type": "gpu",
             "key": "    GPU      ",
+            "keyColor": "blue"
+        },
+        { 
+            "type": "gpu",
+            "format": "{3}",
+            "key": "   GPU Driver",
             "keyColor": "blue"
         },
         {
