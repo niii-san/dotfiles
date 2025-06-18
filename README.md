@@ -24,20 +24,20 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 
 # Packages
 ##  pacman packages
-- `btop` – Modern resource monitor
-- `cava` – Terminal audio visualizer
-- `dunst` – Lightweight notification daemon
-- `fastfetch` – System info fetcher
-- `kitty` – GPU-accelerated terminal
-- `neovim` – Modern Vim-based text editor
-- `rofi-wayland` – Launcher/dmenu replacement
-- `tmux` – Terminal multiplexer
-- `waybar` – Status bar for Wayland
-- `starship` – Cross-shell prompt
-- `waypaper` – Wallpaper manager
-- `blueman-manager` – Bluetooth manager
+- `btop` – resource monitor
+- `cava` – audio visualizer
+- `dunst` – notification daemon
+- `fastfetch` – system info fetcher
+- `alacritty` – terminal emulator 
+- `kitty` – terminal emulator
+- `neovim` – text editor
+- `rofi-wayland` – launcher
+- `tmux` – terminal multiplexer
+- `waybar` – status bar for Wayland
+- `starship` – cross-shell prompt
+- `blueman-manager` – bluetooth manager
 - `pavucontrol` – volume control
-- `yazi` – Tui file manager
+- `yazi` – tui file manager
 
 #### 🗂️ GUI File Manager
 - `thunar`
@@ -62,6 +62,7 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - `imagemagick` - Image editing suite
 
 ## AUR packages
+- `waypaper` – GUI wallpaper picker/manager
 
 
 # Keybindings
@@ -69,8 +70,8 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - `SUPER + Space` - Toogle rofi dmenu
 
 ## Screenshot
-- `SUPER + ALT + 0` - Take a screenshot of selected area 
-- `SUPER + ALT + SHIFT + 0` - Take a screenshot of the entire screen
+- `SUPER + ALT + X` - Take a screenshot of selected area 
+- `SUPER + ALT + SHIFT + X` - Take a screenshot of the entire screen
 
 ## Wallpaper 
 - `SUPER + W` - Open wallpaper selector (_waypaper_). **wallpapers directory should be `~/wallpapers`**
@@ -87,9 +88,10 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 
 ## Others
 - `SUPER + P` - Play/Pause media
-- `SUPER + E` - Open terminal
+- `SUPER + E` - Open terminal (_alacritty_)
+- `SUPER + SHIFT + E` - Open terminal (_kitty_)
 - `SUPER + C` - Kill active window
-- `SUPER + Q` - Open file manager (_In float mode_)
+- `SUPER + Q` - Open file manager (_`thunar` In float mode_)
 - `SUPER + T` - Float window
 - `SUPER + SHIFT + T` - Float all windows
 - `SUPER + F` - Toggle fullscreen 

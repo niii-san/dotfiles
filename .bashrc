@@ -40,10 +40,6 @@ alias stat="btop"
 
 ##################################
 ### custom functions
-home(){
-    cd ~
-}
-
 ff(){
 clear
 fastfetch
