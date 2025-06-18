@@ -197,6 +197,7 @@ window#waybar > box {
 
 #battery.charging {
     color: @battery-charging;
+    animation:none;
 }
 
 #battery.plugged {

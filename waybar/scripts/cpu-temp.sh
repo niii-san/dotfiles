@@ -1,67 +1,71 @@
 #!/usr/bin/env bash
 
-model=$(awk -F ': ' '/model name/{print $2}' /proc/cpuinfo | head -n 1 | sed 's/@.*//; s/ *\((R)\|(TM)\)//g; s/^[ \t]*//; s/[ \t]*$//')
+# CPU model name (cleaned up)
+model=$(awk -F ': ' '/model name/{print $2}' /proc/cpuinfo | head -n 1 | sed 's/@.*//; s/(R)//g; s/(TM)//g; s/^[ \t]*//; s/[ \t]*$//')
 
-# get CPU clock speeds
+# Get CPU frequency
 get_cpu_frequency() {
   freqlist=$(awk '/cpu MHz/ {print $4}' /proc/cpuinfo)
-  maxfreq=$(sed 's/...$//' /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq)
-  if [ -z "$freqlist" ] || [ -z "$maxfreq" ]; then
+  maxfreq_file="/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq"
+
+  if [[ -z "$freqlist" || ! -f "$maxfreq_file" ]]; then
     echo "--"
     return
   fi
-  average_freq=$(echo "$freqlist" | tr ' ' '\n' | awk "{sum+=\$1} END {printf \"%.0f/%s MHz\", sum/NR, $maxfreq}")
-  echo "$average_freq"
+
+  maxfreq=$(< "$maxfreq_file")
+  avg=$(echo "$freqlist" | awk '{sum+=$1} END {printf "%.0f", sum/NR}')
+  echo "${avg}/$((maxfreq / 1000)) MHz"
 }
 
-# get CPU temp
+# Get CPU temperature in °C and °F
 get_cpu_temperature() {
-  temp=$(sensors | awk '/Package id 0/ {print $4}' | awk -F '[+.]' '{print $2}')
+  temp=$(sensors 2>/dev/null | awk -F '[+.]' '/Package id 0/ {print $2; exit}')
   if [[ -z "$temp" ]]; then
-    temp=$(sensors | awk '/Tctl/ {print $2}' | tr -d '+°C')
+    temp=$(sensors 2>/dev/null | awk -F '[+.]' '/Tctl/ {print $2; exit}')
   fi
+
   if [[ -z "$temp" ]]; then
-    temp="--"
-    temp_f="--"
+    temp=0
+    temp_f=32.0
   else
-    temp=${temp%.*}
     temp_f=$(awk "BEGIN {printf \"%.1f\", ($temp * 9 / 5) + 32}")
   fi
-  # Celsius and Fahrenheit
-  echo "${temp:---} ${temp_f:---}"
+
+  echo "$temp $temp_f"
 }
 
+
+# Return appropriate temperature icon
 get_temperature_icon() {
   temp_value=$1
   if [ "$temp_value" = "--" ]; then
-    icon="󱔱" # none
+    echo "󱔱"  # Unknown
   elif [ "$temp_value" -ge 80 ]; then
-    icon="󰸁" # high
+    echo "󰸁"  # High
   elif [ "$temp_value" -ge 70 ]; then
-    icon="󱃂" # medium
+    echo "󱃂"  # Medium
   elif [ "$temp_value" -ge 60 ]; then
-    icon="󰔏" # normal
+    echo "󰔏"  # Normal
   else
-    icon="󱃃" # low
+    echo "󱃃"  # Low
   fi
-  echo "$icon"
 }
 
+# Collect data
 cpu_frequency=$(get_cpu_frequency)
-read -r temp_info < <(get_cpu_temperature)
-temp=$(echo "$temp_info" | awk '{print $1}')
-temp_f=$(echo "$temp_info" | awk '{print $2}')
-thermo_icon=$(get_temperature_icon "$temp")
+read -r temp temp_f < <(get_cpu_temperature)
+icon=$(get_temperature_icon "$temp")
 
-# high temp warning
-if [ "$temp" == "--" ] || [ "$temp" -ge 80 ]; then
-  text_output="<span color='#f38ba8'>${thermo_icon} ${temp}°C</span>"
+# Color text if temperature is high
+if [ "$temp" = "--" ] || [ "$temp" -ge 80 ]; then
+  text_output="<span color='#f38ba8'>${icon} ${temp}°C</span>"
 else
-  text_output="${thermo_icon} ${temp}°C"
+  text_output="${icon} ${temp}°C"
 fi
 
-tooltip=":: ${model}\n"
-tooltip+="Clock Speed: ${cpu_frequency}\nTemperature: ${temp_f}°F"
+tooltip=":: ${model}\nClock Speed: ${cpu_frequency}\nTemperature: ${temp_f}°F"
 
-# module and tooltip
+# Output JSON for Waybar
 echo "{\"text\": \"$text_output\", \"tooltip\": \"$tooltip\"}"
+
