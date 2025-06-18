@@ -8,7 +8,6 @@ ln -s ~/dotfiles/btop ~/.config/btop
 
 #cava
 ln -s ~/dotfiles/cava ~/.config/cava
-
 #dunst
 ln -s ~/dotfiles/dunst ~/.config/dunst
 
@@ -58,6 +57,9 @@ ln -s ~/dotfiles/yazi ~/.config/yazi
 
 # Alacritty
 ln -s ~/dotfiles/alacritty ~/.config/alacritty
+
+# Bat 
+ln -s ~/dotfiles/bat ~/.config/bat
 
 
 
