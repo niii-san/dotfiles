@@ -54,15 +54,19 @@ tooltip label {
 
 .module{
     background: @module-bg;
+    padding: 4 8px;
 }
 /* window#waybar { */
 /* } */
 
 window#waybar > box {
-  background: @background;
   margin-bottom: 0px;
   color: white;
   padding: 2px;
+}
+
+window#waybar{
+    background-color: transparent;
 }
 
 @keyframes pulse {
@@ -72,10 +76,6 @@ window#waybar > box {
 }
 
 /* ----------- Modules ----------- */
-.module {
-    padding: 0 10px;
-    /* background: ; */
-}
 
 /* Workspaces */
 #workspaces{
@@ -142,7 +142,10 @@ window#waybar > box {
 }
 
 #window{
-    background: none;
+    border-radius: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: @background;
 }
 
 
@@ -211,10 +214,20 @@ window#waybar > box {
 /* Time */
 #clock {
     font-weight: bold;
-    background: none;
+    background: @module-bg;
 }
+
+#clock.time{
+    padding-left: 20px;
+    border-radius: 8px 0 0 8px;
+
+}
+/* #clock.date{ */
+/* } */
 #idle_inhibitor{
-    background: none;
+    border-radius:0 8px 8px 0 ;
+    padding-right: 20px;
+    background: @module-bg;
 }
 
 #tray{
