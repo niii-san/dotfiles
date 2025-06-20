@@ -76,8 +76,10 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - `SUPER + ALT + SHIFT + X` - Take a screenshot of the entire screen
 
 ## Wallpaper 
+- wallpaper directory `~/wallpapers`
 - `SUPER + W` - Open wallpaper selector (_waypaper_). **wallpapers directory should be `~/wallpapers`**
-- `SUPER + SHIFT + W` - Toogle wallpaper (_enable/disable hyprpaper_)
+- `SUPER + SHIFT + W` - Toogle wallpaper (_enable/disable swww)
+- `SUPER + ALT + W` - Change wallpaper randomly 
 
 ## Waybar
 - `SUPER + SHIFT + B` - Toggle waybar visibility
