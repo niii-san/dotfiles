@@ -53,7 +53,9 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - `hyprland`
 - `hypridle` - Idle handler
 - `hyprlock` - Lock screen
-- `hyprpaper` - Wallpaper daemon
+
+#### Wallpaper engine
+- `swww`  
 
 #### Screenshot tools
 - `grim` - Screenshot utility
