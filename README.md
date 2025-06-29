@@ -22,21 +22,28 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - Creates symbolic links to place configs in their proper locations.
 - (Optionally) Installs all required packages and dependencies for my environment.
 
+###  **⚠️** You should not copy/paste any commands without knowing what it does specially with `source < ("")`. Although this script is safe. First make sure you check the script :)
+```bash
+curl -s https://www.nishanbista.com/dotfiles.sh | cat
+```
+
 # Packages
 ##  pacman packages
 - `btop` – resource monitor
 - `cava` – audio visualizer
 - `dunst` – notification daemon
 - `fastfetch` – system info fetcher
-- `alacritty` – terminal emulator 
+- `foot` - wayland terminal emulator
 - `kitty` – terminal emulator
+- `alacritty` – terminal emulator 
 - `neovim` – text editor
 - `rofi-wayland` – launcher
 - `tmux` – terminal multiplexer
 - `waybar` – status bar for Wayland
 - `starship` – cross-shell prompt
 - `blueman-manager` – bluetooth manager
-- `pavucontrol` – volume control
+- `pipewire` - for handling audio/video
+- `pavucontrol` – volume control adv settings
 - `yazi` – tui file manager
 
 #### 🗂️ GUI File Manager
@@ -50,9 +57,9 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - `ffmpegthumbnailer`
 
 #### Hyprland Ecosystem 
-- `hyprland`
-- `hypridle` - Idle handler
-- `hyprlock` - Lock screen
+- `hyprland` - WM
+- `hypridle` - idle handler
+- `hyprlock` - lock screen
 
 #### Wallpaper engine
 - `swww`  
@@ -92,7 +99,7 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 
 ## Others
 - `SUPER + P` - Play/Pause media
-- `SUPER + E` - Open terminal (_alacritty_)
+- `SUPER + E` - Open terminal (_foot_)
 - `SUPER + SHIFT + E` - Open terminal (_kitty_)
 - `SUPER + C` - Kill active window
 - `SUPER + Q` - Open file manager (_`thunar` In float mode_)
@@ -108,4 +115,4 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 
 - `SUPER + SHIFT + M` - Exit hyprland
 
-# Feel free to customize and use <3!
+# Feel free to use and customize to your preference <3!

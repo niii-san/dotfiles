@@ -61,6 +61,9 @@ ln -s ~/dotfiles/alacritty ~/.config/alacritty
 # Bat 
 ln -s ~/dotfiles/bat ~/.config/bat
 
+# Foot config
+ln -s ~/dotfiles/foot ~/.config/foot
+
 
 
 # If .bashrc already exists then removing it
