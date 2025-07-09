@@ -22,10 +22,13 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - Creates symbolic links to place configs in their proper locations.
 - (Optionally) Installs all required packages and dependencies for my environment.
 
-###  **⚠️** You should not copy/paste any commands without knowing what it does specially with `source < ("")`. Although this script is safe. First make sure you check the script :)
-```bash
-curl -s https://www.nishanbista.com/dotfiles.sh | cat
-```
+
+> [!WARNING]
+>  You should not copy/paste any commands without knowing what it does specially with `source < ("")`. Although this script is safe. First make sure you check the script :)`
+>    ```bash
+>    curl -s https://www.nishanbista.com/dotfiles.sh | cat 
+> ```
+
 
 # Packages
 ##  pacman packages
