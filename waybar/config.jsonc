@@ -35,8 +35,7 @@
 
   // <<--< Modules >-->>
 
-  "hyprland/workspaces": {
-    "on-scroll-up": "hyprctl dispatch workspace -1",
+  "hyprland/workspaces": { "on-scroll-up": "hyprctl dispatch workspace -1",
     "on-scroll-down": "hyprctl dispatch workspace +1",
     "persistent-workspaces": {
       "1": [],
@@ -318,6 +317,12 @@
     "interval": 1,
     "min-length": 6,
     "max-length": 6
+  },
+
+    "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+    "show-passive-items": true
   },
 
   "custom/power": {

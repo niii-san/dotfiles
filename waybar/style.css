@@ -54,7 +54,7 @@ tooltip label {
 
 .module{
     background: @module-bg;
-    padding: 4 8px;
+    padding: 4px 8px;
 }
 /* window#waybar { */
 /* } */
