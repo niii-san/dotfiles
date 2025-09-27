@@ -1,0 +1,81 @@
+/*****----- Configuration -----*****/
+configuration {
+    font: "JetBrains Mono 12";
+    show-icons: false;
+    location: 0;            /* Center */
+    fullscreen: false;
+    fixed-num-lines: true;
+    disable-history: false;
+}
+
+/*****----- Global Properties -----*****/
+* {
+    font: "JetBrains Mono Nerd Font 10";
+    background:     #15161EFF; /* Tokyo Night Dark */
+    background-alt: #1A1B26FF;
+    foreground:     #C0CAF5FF;
+    selected:       #33467CFF;
+    active:         #414868FF;
+    urgent:         #F7768EFF;
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:     "real";
+    location:         center;
+    anchor:           center;
+    fullscreen:       false;
+    width:            600px;  /* Smaller width */
+    height:           200px;
+    border-radius:    15px;
+    background-color: @background;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:          true;
+    spacing:          0px;
+    background-color: transparent;
+    orientation:      vertical;
+    children:         [ "imagebox" ];
+}
+
+/*****----- Image Box with Search -----*****/
+imagebox {
+    padding:          20px;
+    background-color: transparent;
+    background-image: url("~/.config/rofi/images/boat_minimal.jpg", height);
+    orientation:      vertical;
+    spacing:          15px;
+    children:         [ "inputbar" ];
+}
+
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:          true;
+    spacing:          10px;
+    padding:          15px;
+    border-radius:    10px;
+    background-color: @background-alt;
+    text-color:       @foreground;
+    children:         [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled:          true;
+    expand:           false;
+    str:              "";
+    background-color: inherit;
+    text-color:       #7aa2f7; /* Accent color */
+}
+
+entry {
+    enabled:          true;
+    background-color: inherit;
+    text-color:       inherit;
+    cursor:           text;
+    placeholder:      "Search";
+    placeholder-color: inherit;
+}
+
