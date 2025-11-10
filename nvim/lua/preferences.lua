@@ -5,6 +5,8 @@ vim.opt.smartindent = true
 
 vim.opt.cursorline = true
 
+-- to enable system clipboard access
+vim.o.clipboard = "unnamedplus"
 
 
 -- Set tab width to 4 spaces
