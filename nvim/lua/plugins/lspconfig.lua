@@ -27,6 +27,11 @@ return {
                 capabilities = capabilities,
             })
 
+            -- Go lang
+            lspconfig.gopls.setup({
+                capabilities = capabilities,
+            })
+
             -- prisma setup
             lspconfig.prismals.setup({
                 capabilities = capabilities,
