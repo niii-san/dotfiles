@@ -73,6 +73,9 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - `swappy` - Annotate screenshots
 - `imagemagick` - Image editing suite
 
+#### Others
+- `gammastep` – blue light filter
+
 ## AUR packages
 - `waypaper` – GUI wallpaper picker/manager
 
@@ -115,6 +118,7 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - `SUPER + vim (HJKL)` - Switch focus 
 - `SUPER + arrow keys` - Switch focus  
 - `SUPER + SHIFT + arrow keys` - Resize window
+- `SUPER + CTRL + B` - Toogle gammastep (blue light filter)
 
 - `SUPER + SHIFT + M` - Exit hyprland
 

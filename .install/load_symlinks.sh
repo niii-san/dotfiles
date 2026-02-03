@@ -64,6 +64,9 @@ ln -s ~/dotfiles/bat ~/.config/bat
 # Foot config
 ln -s ~/dotfiles/foot ~/.config/foot
 
+# gammastep (bluelight filter)
+ln -s ~/dotfiles/gammastep ~/.config/gammastep
+
 
 
 # If .bashrc already exists then removing it
