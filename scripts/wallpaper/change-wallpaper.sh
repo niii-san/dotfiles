@@ -3,8 +3,8 @@
 # Folder containing wallpapers
 WALLPAPER_DIR="$HOME/wallpapers"
 
-# Ensure swww is running
-pgrep -x swww-daemon > /dev/null || swww-daemon & 
+# Ensure awww is running
+pgrep -x awww-daemon > /dev/null || awww-daemon & 
 
 # Pick a random wallpaper
 WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname '*.jpg' -o -iname '*.png' -o -iname '*.jpeg' -o -iname '*.gif' \) | shuf -n 1)
@@ -19,5 +19,5 @@ DURATION=2
 FPS=165
 
 # Set the wallpaper with animation
-swww img "$WALLPAPER" --transition-type "$ANIM" --transition-duration "$DURATION" --transition-fps "$FPS"
+awww img "$WALLPAPER" --transition-type "$ANIM" --transition-duration "$DURATION" --transition-fps "$FPS"
 

@@ -65,7 +65,7 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 - `hyprlock` - lock screen
 
 #### Wallpaper engine
-- `swww`  
+- `awww`  
 
 #### Screenshot tools
 - `grim` - Screenshot utility
@@ -91,7 +91,7 @@ source <(curl -s https://www.nishanbista.com/dotfiles.sh)
 ## Wallpaper 
 - wallpaper directory `~/wallpapers`
 - `SUPER + W` - Open wallpaper selector (_waypaper_). **wallpapers directory should be `~/wallpapers`**
-- `SUPER + SHIFT + W` - Toogle wallpaper (_enable/disable swww)
+- `SUPER + SHIFT + W` - Toogle wallpaper (_enable/disable awww)
 - `SUPER + ALT + W` - Change wallpaper randomly 
 
 ## Waybar

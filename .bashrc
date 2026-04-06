@@ -20,9 +20,10 @@ source "$configs/env.sh"
 
 
 
-alias ls='ls --color=auto'
+alias ls='ls --color=auto -l'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
+
 
 
 
@@ -33,6 +34,8 @@ alias net="nmtui"
 alias fm="yazi"
 
 alias stat="btop"
+
+alias dev="/media/dev"
 
 
 
@@ -50,7 +53,7 @@ quote(){
 }
 
 
-dev(){
+development(){
 cd /media/dev
 }
 
